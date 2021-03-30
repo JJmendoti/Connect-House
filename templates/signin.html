@@ -1,0 +1,52 @@
+{% extends './layout/layout.html' %}
+
+{% block title %}
+Ingresar
+{% endblock %}
+{% block content %}
+<div class="page-login-com">
+    <div class="row row-login gx-0 gy-0">
+        <div class="col-lg-12 page-login">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4 form-user">
+                    <div class="form-login">
+                        <h3>Inicio de sesión usuarios</h3>
+                        <form id="form-user" class="mt-2">
+                            <label for="">Correo:</label>
+                            <input type="email" class="form-control mt-1" placeholder="Ingresa tu correo electronico">
+                            <label class="mt-4" for="">Contraseña:</label>
+                            <input type="password" class="form-control mt-1" placeholder="Ingresa tu contraseña">
+                            <a class="float-start"><span>¿Eres propietario?</span></a>
+                            <a class="float-end"href="/signup"><span>Registrarse</span></a>
+                            <div class=" mt-5 text-center">
+                                <input class="btn-submit" type="submit" value="Iniciar sesión">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 form-property">
+                    <div class="form-login">
+                        <h3>Inicio de sesión propietarios</h3>
+                        <form id="form-property" class="mt-2">
+                            <label for="">Correo:</label>
+                            <input type="email" class="form-control mt-1" placeholder="Ingresa tu correo electronico">
+                            <label class="mt-4" for="">Contraseña:</label>
+                            <input type="password" class="form-control mt-1" placeholder="Ingresa tu contraseña">
+                            <a class="float-start"><span>¿Eres Usuario?</span></a>
+                            <a class="float-end"href="/signup"><span>Registrarse</span></a>
+                            <div class=" mt-5 text-center">
+                                <input class="btn-submit" type="submit" value="Iniciar sesión">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
