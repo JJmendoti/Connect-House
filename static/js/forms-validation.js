@@ -1,3 +1,4 @@
+"use strict"
 function validateFields() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -78,7 +79,7 @@ function validateFields() {
         });
         return false;
 
-    } else if (identification.length <= 9) {
+    } else if (identification.length >= 9) {
         Swal.fire({
             title: "Error",
             text: "Ingrese al menos 9 caracteres para continuar",
@@ -177,7 +178,7 @@ function validateFields() {
     } else if (!passwordNum(password)) {
         Swal.fire({
             title: "Error",
-            text: "El campo Contraseña esta incorrecta",
+            text: "Contraseña incorrecta debe tener al menos un número",
             icon: "error",
             confirmButtonText: 'Continuar',
             footer: '<span class="footer-alert">Esta información es importante</span>',
@@ -264,7 +265,7 @@ function validateLogin(){
     }else if (!passwordNum(password)) {
         Swal.fire({
             title: "Error",
-            text: "El campo Contraseña esta incorrecta",
+            text: "Contraseña incorrecta debe tener al menos un número",
             icon: "error",
             confirmButtonText: 'Continuar',
             footer: '<span class="footer-alert">Esta información es importante</span>',
