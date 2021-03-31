@@ -1,3 +1,7 @@
+body{
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
 /* Estilos de layouy*/
 .footer-page {
     min-height: 7vh;
@@ -17,7 +21,7 @@
 
 .home {
     min-height: 50vh;
-    background-color: hsla(0, 0%, 92%, 0.827);
+    background-color: hsla(0, 0%, 87%, 0.856);
     border-radius: 5px;
 }
 
