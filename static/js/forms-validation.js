@@ -1,4 +1,5 @@
 "use strict"
+
 function validateFields() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -290,3 +291,85 @@ function validateLogin(){
     return true;
 
 }
+
+
+function validateLoginPrio(){
+    let emailPrio = document.getElementById("emailPrio").value;
+    let passwordPrio = document.getElementById("passwordPrio").value;
+
+    if(emailPrio === ""){
+        Swal.fire({
+            title: "Error",
+            text: "El campo Email esta vacio",
+            icon: "error",
+            confirmButtonText: 'Continuar',
+            footer: '<span class="footer-alert">Esta información es importante</span>',
+            background: '#ddd',
+            backdrop: true,
+            toast: true,
+            position: 'center',
+            allowOutsideClick: false,
+            allowEscapeKey: true,
+            allowEnterKey: true,
+            stopKeydownPropagation: false,
+            showConfirmButton: true,
+            confirmButtonColor: '#3307c2',
+            confirmButtonAriaLabel: 'Continuar',
+            buttonsStyling: true,
+            showCloseButton: true,
+            closeButtonAriaLabel: 'close alert'
+        });
+        return false;
+
+    }else if(passwordPrio === "") {
+        Swal.fire({
+            title: "Error",
+            text: "El campo Contraseña esta vacio",
+            icon: "error",
+            confirmButtonText: 'Continuar',
+            footer: '<span class="footer-alert">Esta información es importante</span>',
+            background: '#ddd',
+            backdrop: true,
+            toast: true,
+            position: 'center',
+            allowOutsideClick: false,
+            allowEscapeKey: true,
+            allowEnterKey: true,
+            stopKeydownPropagation: false,
+            showConfirmButton: true,
+            confirmButtonColor: '#3307c2',
+            confirmButtonAriaLabel: 'Continuar',
+            buttonsStyling: true,
+            showCloseButton: true,
+            closeButtonAriaLabel: 'close alert'
+        });
+        return false;
+    }else if (!passwordNum(passwordPrio)) {
+        Swal.fire({
+            title: "Error",
+            text: "Contraseña incorrecta debe tener al menos un número",
+            icon: "error",
+            confirmButtonText: 'Continuar',
+            footer: '<span class="footer-alert">Esta información es importante</span>',
+            background: '#ddd',
+            backdrop: true,
+            toast: true,
+            position: 'center',
+            allowOutsideClick: false,
+            allowEscapeKey: true,
+            allowEnterKey: true,
+            stopKeydownPropagation: false,
+            showConfirmButton: true,
+            confirmButtonColor: '#3307c2',
+            confirmButtonAriaLabel: 'Continuar',
+            buttonsStyling: true,
+            showCloseButton: true,
+            closeButtonAriaLabel: 'close alert'
+        });
+        console.log(passwordPrio);
+        return false;
+    }
+    return true;
+
+}
+
