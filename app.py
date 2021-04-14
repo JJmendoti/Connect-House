@@ -19,6 +19,14 @@ def signup():
 def addapartament():
     return render_template('addapartament.html')
 
+@app.route('/homeuser')
+def homeuser():
+    return render_template('homeUser.html')
+
+@app.route('/homeonwer')
+def homeonwer():
+    return render_template('homeOnwer.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=8001)

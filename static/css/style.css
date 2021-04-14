@@ -116,3 +116,13 @@ body{
 .navbar .collapse .navbar-nav a{
     color: #efb810;
 }
+
+.apartments {
+    min-height: 85vh;
+}
+
+.data-user{
+        min-height: 85vh;
+        background-image: url('/static/img/back-onwer.jpeg');
+        box-shadow: 2px 1px 12px #000000;
+}
