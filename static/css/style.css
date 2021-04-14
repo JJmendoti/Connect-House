@@ -39,11 +39,11 @@ body{
 /* Estilos de login*/
 .page-login {
     min-height: 85vh;
-    background-image: url('/static/img/login.jpg');
     padding-top: 50px;
-    background-size: cover;
+    background-image: url('/static/img/login.jpg');
     background-repeat: no-repeat;
-    background-size: 100;
+    background-size:100%  100%;
+    background-attachment: fixed;
 }
 .game {
     height: 50%;
@@ -62,9 +62,8 @@ body{
     min-height: 85vh;
     background-image: url('/static/img/signup.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 50px 0 0 100px;
-    background-size: 100;
+    padding: 20px 0 0 100px;
+    background-size:100%  100%;
 }
 
 .form-signin {
@@ -93,6 +92,9 @@ body{
     font-size: 20px;
     font-family: 'Ranchers', cursive;
 }
+.btn-submit:hover {
+    background-color: #efb71085;
+}
 .form-login {
     background-color: rgba(92, 92, 92, 0.5);
     border-radius: 10px;
@@ -108,4 +110,9 @@ body{
 .link-form :hover {
     color:rgb(177, 177, 177);
     cursor: pointer;
+}
+
+/* Estilos para navbar color de texto menú */
+.navbar .collapse .navbar-nav a{
+    color: #efb810;
 }

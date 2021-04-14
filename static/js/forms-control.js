@@ -25,3 +25,12 @@ $(document).ready(function(){
 
     });
  });
+
+ $('li a').click(function(e) {
+    //e.preventDefault();
+    let $this = $(this);
+    $this.closest('ul').find('li.active,a.active').removeClass('active');
+    $this.addClass('active');
+    $this.parent().addClass('active');
+
+});

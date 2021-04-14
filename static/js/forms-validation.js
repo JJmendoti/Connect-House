@@ -86,7 +86,7 @@ function validateFields() {
         });
         return false;
 
-    } else if (identification.length >= 9) {
+    } else if (identification.length < 9) {
         Swal.fire({
             title: "Advertencia",
             text: "Ingrese al menos 9 caracteres para continuar",
