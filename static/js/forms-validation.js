@@ -401,6 +401,7 @@ function validateLoginPrio() {
 }
 
 function validateAddApartment() {
+  let title = document.getElementById("title").value;
   let city = document.getElementById("city").value;
   let country = document.getElementById("country").value;
   let direction = document.getElementById("direction").value;
@@ -410,10 +411,10 @@ function validateAddApartment() {
   let nightValue = document.getElementById("nightValue").value;
   let review = document.getElementById("review").value;
 
-  if (city === "") {
+  if (title === "") {
     Swal.fire({
       title: "Advertencia",
-      text: "El campo city esta vacio",
+      text: "El campo title esta vacio",
       icon: "warning",
       confirmButtonText: "Continuar",
       footer:
@@ -436,7 +437,33 @@ function validateAddApartment() {
       closeButtonAriaLabel: "close alert",
     });
     return false;
-  } else if (country === "") {
+  }else if (city === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo city esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }else if (country === "") {
     Swal.fire({
       title: "Advertencia",
       text: "El campo country esta vacio",
@@ -466,32 +493,6 @@ function validateAddApartment() {
     Swal.fire({
       title: "Advertencia",
       text: "El campo direction esta vacio",
-      icon: "warning",
-      confirmButtonText: "Continuar",
-      footer:
-        '<span class="footer-alert">Esta información es importante</span>',
-      background: "#fff",
-      backdrop: true,
-      toast: true,
-      width: 600,
-      height: 600,
-      position: "center",
-      allowOutsideClick: false,
-      allowEscapeKey: true,
-      allowEnterKey: true,
-      stopKeydownPropagation: false,
-      showConfirmButton: true,
-      confirmButtonColor: "#efb810",
-      confirmButtonAriaLabel: "Continuar",
-      buttonsStyling: true,
-      showCloseButton: true,
-      closeButtonAriaLabel: "close alert",
-    });
-    return false;
-  } else if (location === "") {
-    Swal.fire({
-      title: "Advertencia",
-      text: "El campo location esta vacio",
       icon: "warning",
       confirmButtonText: "Continuar",
       footer:
@@ -544,6 +545,32 @@ function validateAddApartment() {
     Swal.fire({
       title: "Advertencia",
       text: "El campo outstandingImage esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  } else if (location === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo location esta vacio",
       icon: "warning",
       confirmButtonText: "Continuar",
       footer:
