@@ -2,16 +2,17 @@
 
 function validateFields() {
   let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
   let identification = document.getElementById("identification").value;
-  let country = document.getElementById("country").value;
   let city = document.getElementById("city").value;
+  let country = document.getElementById("country").value;
+  let avatar = document.getElementById("avatar").value;
+  let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
   if (name === "") {
     Swal.fire({
       title: "Advertencia",
-      text: "El campo name esta vacio",
+      text: "El campo Nombre esta vacio",
       icon: "warning",
       confirmButtonText: "Continuar",
       footer:
@@ -21,32 +22,6 @@ function validateFields() {
       width: 600,
       height: 600,
       toast: true,
-      position: "center",
-      allowOutsideClick: false,
-      allowEscapeKey: true,
-      allowEnterKey: true,
-      stopKeydownPropagation: false,
-      showConfirmButton: true,
-      confirmButtonColor: "#efb810",
-      confirmButtonAriaLabel: "Continuar",
-      buttonsStyling: true,
-      showCloseButton: true,
-      closeButtonAriaLabel: "close alert",
-    });
-    return false;
-  } else if (email === "") {
-    Swal.fire({
-      title: "Advertencia",
-      text: "El campo Email esta vacio",
-      icon: "warning",
-      confirmButtonText: "Continuar",
-      footer:
-        '<span class="footer-alert">Esta información es importante</span>',
-      background: "#fff",
-      backdrop: true,
-      toast: true,
-      width: 600,
-      height: 600,
       position: "center",
       allowOutsideClick: false,
       allowEscapeKey: true,
@@ -86,36 +61,10 @@ function validateFields() {
       closeButtonAriaLabel: "close alert",
     });
     return false;
-  } else if (identification.length < 9) {
+  }else if (identification.length < 9) {
     Swal.fire({
       title: "Advertencia",
       text: "Ingrese al menos 9 caracteres para continuar",
-      icon: "warning",
-      confirmButtonText: "Continuar",
-      footer:
-        '<span class="footer-alert">Esta información es importante</span>',
-      background: "#fff",
-      backdrop: true,
-      toast: true,
-      width: 600,
-      height: 600,
-      position: "center",
-      allowOutsideClick: false,
-      allowEscapeKey: true,
-      allowEnterKey: true,
-      stopKeydownPropagation: false,
-      showConfirmButton: true,
-      confirmButtonColor: "#efb810",
-      confirmButtonAriaLabel: "Continuar",
-      buttonsStyling: true,
-      showCloseButton: true,
-      closeButtonAriaLabel: "close alert",
-    });
-    return false;
-  } else if (country === "") {
-    Swal.fire({
-      title: "Advertencia",
-      text: "El campo Pais esta vacio",
       icon: "warning",
       confirmButtonText: "Continuar",
       footer:
@@ -142,6 +91,84 @@ function validateFields() {
     Swal.fire({
       title: "Advertencia",
       text: "El campo Ciudad esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }  else if (country === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo Pais esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }else if (avatar === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo Imagen de Perfil esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  } else if (email === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo Email esta vacio",
       icon: "warning",
       confirmButtonText: "Continuar",
       footer:
