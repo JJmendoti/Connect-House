@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, session 
+from flask import Flask, render_template, jsonify, request, session, redirect, url_for
 import pymongo
 from bson import ObjectId
 import os
@@ -35,12 +35,27 @@ def addapartament():
 
 @app.route('/homeuser')
 def homeuser():
-    return render_template('homeUser.html')
+    if session['user']:
+        query = {"_id": ObjectId(session['user'])}
+        result = userCollection.find_one(query)
+        return render_template('homeUser.html', data = result)
 
 @app.route('/homeonwer')
 def homeonwer():
-    return render_template('homeOnwer.html')
+    if session['user']:
+        query = {"_id": ObjectId(session['user'])}
+        result = onwerCollection.find_one(query)
+        return render_template('homeUser.html', data = result)
 
+@app.route('/signout')
+def signout():
+    session.clear()
+    return redirect(url_for('signin'))
+
+@app.route('/404')
+def err():
+    session.clear()
+    return render_template('404.html')
 
 # @app.route('/user/', methods=['GET'])
 # def user():
@@ -58,9 +73,9 @@ def user_by_id(id):
             if result:
                 return render_template("homeUser.html", data = result)
             else: 
-                return render_template("404.html")
+                return redirect(url_for("404"))
         except:
-            return render_template("404.html")
+            return redirect(url_for("404"))
 @app.route('/user/<id>',methods=['DELETE'])
 def delete_user(id):
     try:  
@@ -72,7 +87,7 @@ def delete_user(id):
         else:
             return render_template("index.html", delete = False)
     except:
-        return render_template("404.html")
+        return redirect(url_for("404"))
 
 @app.route('/user', methods=['POST'])
 def send_user():
@@ -292,9 +307,11 @@ def signinuser():
     result = userCollection.find_one(query)
     if result:
         session['user'] = str(result['_id']) 
-        return render_template("homeUser.html", data = result)
+        session['name'] = result['name']
+        session['type'] = "user"
+        return redirect(url_for("homeuser"))
     else:
-        return status
+        return render_template("signin.html", status = status)
 
 @app.route('/signinonwer', methods=['POST'])
 def signinonwer():
@@ -305,7 +322,9 @@ def signinonwer():
     result = onwerCollection.find_one(query)
     if result:
         session['user'] = str(result['_id']) 
-        return render_template("homeOnwer.html", data = result)
+        session['name'] = result['name']
+        session['type'] = "onwer"
+        return redirect(url_for('homeonwer'))
     else:
         return render_template("signin.html", status = status)
 

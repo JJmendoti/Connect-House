@@ -39,16 +39,20 @@
             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Hoteles</a>
+            <a class="nav-link" href="/apartment">Hoteles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" aria-current="page">Buscar</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          {% if user in session %}
+          {% if "user" in session and session['type'] == "user" %}
           <li class="nav-item ">
-            <a class="nav-link" href="/signin" aria-current="page"></a>
+            <a class="nav-link" href="/homeuser" aria-current="page">{{session['name']}}</a>
+          </li>
+          {% elif "user" in session and session['type'] == "onwer" %}
+          <li class="nav-item ">
+            <a class="nav-link" href="/homeonwer" aria-current="page">{{session['name']}}</a>
           </li>
           {% else %}
           <li class="nav-item ">

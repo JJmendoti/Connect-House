@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-image: linear-gradient(to top, #cecfcf 0%, #f2f7fd 100%);
+    background-image: #fff;
 }
 
 /* Estilos de 404 */
@@ -195,4 +195,8 @@ body {
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.card:hover {
+    box-shadow: 1px -1px 5px #000000;
 }
