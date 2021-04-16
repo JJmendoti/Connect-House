@@ -4,9 +4,57 @@
 Connect-House
 {% endblock %}
 {% block content %}
-<div class="page">
-    <div class="container home">
 
+<div class="page">
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel__lista">
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/1.jpeg" alt="Rock and Roll Hall of Fame">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/2.jpeg" alt="Constitution Square - Tower I">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/3.jpeg" alt="Empire State Building">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/4.jpeg" alt="Harmony Tower">
+
+                    </div>
+
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/5.jpeg" alt="Empire State Building">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/6.jpeg" alt="Harmony Tower">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/7.jfif" alt="Empire State Building">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/8.jpeg" alt="Harmony Tower">
+                    </div>
+                </div>
+
+                <button aria-label="Siguiente" class="carousel__siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div role="tablist" class="carousel__indicadores"></div>
+        </div>
     </div>
 </div>
 

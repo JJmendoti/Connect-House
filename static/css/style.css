@@ -1,8 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
     background-image: linear-gradient(to top, #cecfcf 0%, #f2f7fd 100%);
+    align-items: center;
 }
 
 /* Estilos de 404 */
@@ -41,6 +46,7 @@ body {
     color: #cc780a;
     background: #86880385;
 }
+
 /* Estilos de layouy*/
 .footer-page {
     min-height: 7vh;
@@ -195,4 +201,62 @@ body {
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #efb810;
+	opacity: 2;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -25px;
+}
+
+.carousel__siguiente {
+	right: -25px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: rgb(7, 7, 7);
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
 }
