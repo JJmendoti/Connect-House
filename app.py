@@ -239,6 +239,7 @@ def send_apartment():
     name = request.form.get('title')
     idonwer = request.form.get('idonwer')
     location = request.form.get('location')
+    assessment = 1
     country = request.form.get('country')
     city = request.form.get('city')
     address = request.form.get('address')
@@ -250,7 +251,7 @@ def send_apartment():
     image_featured.save(os.path.join(app.config['UPLOAD_FOLDER'], image_featured_name))
     nigth_value = request.form.get('nightValue')
     review = request.form.get('review')
-    apartment = {"idonwer": idonwer, "name":name, "address": address, "location": location, "country": country, "city": city, "image":imagename, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
+    apartment = {"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":imagename, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
     save = apartmentsCollection.insert_one(apartment)
     if save:
         return render_template("addapartament.html", status = "Y")

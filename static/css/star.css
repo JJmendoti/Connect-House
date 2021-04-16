@@ -1,12 +1,10 @@
 #form {
     width: 250px;
-    margin: 0 auto;
+    text-align: left;
     height: 50px;
   }
   
-  #form p {
-    text-align: center;
-  }
+ 
   
   #form label {
     font-size: 20px;
@@ -16,7 +14,7 @@
     display: none;
   }
   
-  label {
+  .label {
     color: grey;
   }
   
@@ -25,11 +23,15 @@
     unicode-bidi: bidi-override;
   }
   
-  label:hover,
-  label:hover ~ label {
+  .label:hover,
+  .label:hover ~ .label {
     color: orange;
   }
   
   input[type="radio"]:checked ~ label {
     color: orange;
   }
+
+
+
+

@@ -17,6 +17,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet">
   <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/star.css')}}">
   <title>{% block title %} {% endblock %}</title>
 
 </head>
@@ -45,9 +46,15 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {% if user in session %}
+          <li class="nav-item ">
+            <a class="nav-link" href="/signin" aria-current="page"></a>
+          </li>
+          {% else %}
           <li class="nav-item ">
             <a class="nav-link" href="/signin" aria-current="page">Ingresar</a>
           </li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -55,7 +62,7 @@
   {% block content %}
   {% endblock %}
 
-  <div class="footer-page pt-3">
+  <div class="footer-page pt-3 mt-5">
     <p> &copy; Connect-House Todos los derechos reservados 2021 </p>
   </div>
 </body>
