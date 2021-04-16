@@ -16,61 +16,54 @@ Sign In
             </div>
             <div class="row">
                 <div class="col-lg-10 form-signin mt-2">
-                    <form id="form-register-user" onsubmit="return validateAddApartment();">
+                    <form id="form-register-apartments" method="post" action=""  onsubmit="return validateAddApartment();">
                         <div class="row">
                             <div class="col">
                                 <label for="">Titulo de la Propiedad:</label>
-                                <input type="text" class="form-control mt-1" id="title" placeholder="Ingresa el titulo de la Propiedad">
+                                <input type="text" class="form-control mt-1" id="title" name="title" placeholder="Ingresa el titulo de la Propiedad">
                             </div>
                             <div class="col">
                                 <label for="">Ciudad:</label>
-                                <input type="text" class="form-control mt-1" id="city" placeholder="Ingresa la ciudad">
+                                <input type="text" class="form-control mt-1" id="city" name="city" placeholder="Ingresa la ciudad">
                             </div>
                         </div>
                         <div class="row mt-4">
 
                             <div class="col">
                                 <label for="">Pais:</label>
-                                <input type="text" class="form-control mt-1" id="country" placeholder="Ingresa el pais">
+                                <input type="text" class="form-control mt-1" id="country" name="country" placeholder="Ingresa el pais">
                             </div>
                             <div class="col">
                                 <label for="">Dirección:</label>
-                                <input type="text" class="form-control mt-1" id="direction"
-                                    placeholder="Ingresa la dirección">
+                                <input type="text" class="form-control mt-1" id="direction" name="direction" placeholder="Ingresa la dirección">
                             </div>
                         </div>
                         <div class="row mt-4">
 
                             <div class="col">
                                 <label for="">Imagenes:</label>
-                                <input type="text" class="form-control mt-1" id="images"
-                                    placeholder="Ingresa imagenes de tu inmueble">
+                                <input type="text" class="form-control mt-1" id="images" name="images" placeholder="Ingresa imagenes de tu inmueble">
                             </div>
                             <div class="col">
                                 <label for="">Imagen Destacada:</label>
-                                <input type="text" class="form-control mt-1" id="outstandingImage"
-                                    placeholder="Ingresa la imagen destacada">
+                                <input type="text" class="form-control mt-1" id="outstandingImage" name="outstandingImage" placeholder="Ingresa la imagen destacada">
                             </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col">
                                 <label for="">Ubicación en Google Maps:</label>
-                                <input type="text" class="form-control mt-1" id="location"
-                                    placeholder="Ingresa el enlace de la ubicación">
+                                <input type="text" class="form-control mt-1" id="location" name="location" placeholder="Ingresa el enlace de la ubicación">
                             </div>
                             <div class="col">
-
                                 <label for="">Valor Noche:</label>
-                                <input type="text" class="form-control mt-1" id="nightValue"
-                                    placeholder="Ingresa el valor de la noche">
+                                <input type="text" class="form-control mt-1" id="nightValue" name="nightValue" placeholder="Ingresa el valor de la noche">
                             </div>
 
                         </div>
                         <div class="row mt-4">
                             <div class="col">
                                 <label for="">Reseña del Inmueble:</label>
-                                <textarea class="form-control mt-1" id="review"
-                                    placeholder="Ingresa una reseña de tu inmueble"></textarea>
+                                <textarea class="form-control mt-1" id="review" name="review" placeholder="Ingresa una reseña de tu inmueble"></textarea>
                             </div>
                         </div>
                         <div class="col mt-4 text-center">
