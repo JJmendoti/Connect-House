@@ -7,7 +7,11 @@ Perfil Propietario
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-2 data-user">
-            
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="rounded-circle user-img" src="{{url_for('static', filename='img/uploads/'+data['avatar'])}}" alt="">
+                </div>
+            </div>
         </div>
             
         <div class="col-lg-10 apartments">

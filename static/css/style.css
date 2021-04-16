@@ -126,3 +126,11 @@ body{
         background-image: url('/static/img/back-onwer.jpeg');
         box-shadow: 2px 1px 12px #000000;
 }
+
+.alert {
+    margin-bottom: 0 !important;
+}
+
+.user-img {
+    width: 50%;
+}
