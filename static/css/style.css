@@ -6,8 +6,12 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+<<<<<<< HEAD
     background-image: linear-gradient(to top, #cecfcf 0%, #f2f7fd 100%);
     align-items: center;
+=======
+    background-image: #fff;
+>>>>>>> 619763d5023952674ed0fb0d5f80772606967723
 }
 
 /* Estilos de 404 */
@@ -203,6 +207,7 @@ body {
     padding-right: 10px;
 }
 
+<<<<<<< HEAD
 
 /* --- --- CAROUSEL --- --- */
 .carousel__contenedor {
@@ -260,3 +265,8 @@ body {
 .carousel__indicadores .glider-dot.active {
 	opacity: 1;
 }
+=======
+.card:hover {
+    box-shadow: 1px -1px 5px #000000;
+}
+>>>>>>> 619763d5023952674ed0fb0d5f80772606967723
