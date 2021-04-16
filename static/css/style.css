@@ -1,18 +1,52 @@
-body{
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #cecfcf 0%, #f2f7fd 100%);
 }
 
-.figure {
-    margin: 1px auto;
+/* Estilos de 404 */
+.page-404 {
+    width: 100%;
+    position: relative;
+    top: 0;
+    transform: translateY(-5%);
+    text-align: center;
+    color: #301c1c
 }
-.figure-img{
-    margin: 0 auto;
+
+.page-404 h1 {
+    font-size: 160px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url(/static/img/404.jpg) center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.page-404 a {
+    text-decoration: none;
+    background: #efb810;
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.page-404 a:hover {
+    color: #cc780a;
+    background: #86880385;
 }
 /* Estilos de layouy*/
 .footer-page {
     min-height: 7vh;
     background-color: black;
 }
+
 .footer-page p {
     color: white;
     text-align: center;
@@ -48,28 +82,31 @@ body{
     padding-top: 50px;
     background-image: url('/static/img/login.jpg');
     background-repeat: no-repeat;
-    background-size:100%  100%;
+    background-size: 100% 100%;
     background-attachment: fixed;
 }
+
 .game {
     height: 50%;
     background-color: black;
     padding: 1% 2% 1% 2%;
 }
-.img-game-log-one, .img-game-log-two {
-     height: 98%;
-     width: 98%;
- }
+
+.img-game-log-one,
+.img-game-log-two {
+    height: 98%;
+    width: 98%;
+}
 
 
- /* estilos del sign In*/
+/* estilos del sign In*/
 
 .signin {
     min-height: 85vh;
     background-image: url('/static/img/signup.jpg');
     background-repeat: no-repeat;
     padding: 20px 0 0 100px;
-    background-size:100%  100%;
+    background-size: 100% 100%;
 }
 
 .form-signin {
@@ -79,16 +116,19 @@ body{
     color: white;
 
 }
+
 #title-sign {
     color: white;
     font-family: 'Ranchers', cursive;
 }
+
 .title-signin {
     background-color: rgba(92, 92, 92, 0.5);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
+
 .btn-submit {
     width: 200px;
     height: 40px;
@@ -98,9 +138,11 @@ body{
     font-size: 20px;
     font-family: 'Ranchers', cursive;
 }
+
 .btn-submit:hover {
     background-color: #efb71085;
 }
+
 .form-login {
     background-color: rgba(92, 92, 92, 0.5);
     border-radius: 10px;
@@ -114,12 +156,12 @@ body{
 }
 
 .link-form :hover {
-    color:rgb(177, 177, 177);
+    color: rgb(177, 177, 177);
     cursor: pointer;
 }
 
 /* Estilos para navbar color de texto menú */
-.navbar .collapse .navbar-nav a{
+.navbar .collapse .navbar-nav a {
     color: #efb810;
 }
 
@@ -127,11 +169,11 @@ body{
     min-height: 85vh;
 }
 
-.data-user{
-        min-height: 85vh;
-        background-image: url('/static/img/back-onwer.jpeg');
-        box-shadow: 2px 1px 12px #000000;
-        color: white;
+.data-user {
+    min-height: 85vh;
+    background-image: url('/static/img/back-onwer.jpeg');
+    box-shadow: 2px 1px 12px #000000;
+    color: white;
 }
 
 .alert {
@@ -143,7 +185,7 @@ body{
     box-shadow: 3px 4px 12px #000000;
 }
 
-.list-group li{
+.list-group li {
     background-color: rgba(255, 255, 255, 0.219);
     color: white;
 }
