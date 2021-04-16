@@ -2,6 +2,12 @@ body{
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
+.figure {
+    margin: 1px auto;
+}
+.figure-img{
+    margin: 0 auto;
+}
 /* Estilos de layouy*/
 .footer-page {
     min-height: 7vh;
