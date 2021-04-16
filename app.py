@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, session 
 import pymongo
 from bson import ObjectId
 import os
@@ -15,6 +15,7 @@ userCollection = myDB["user"]
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/img/uploads'
+app.secret_key = 'werwetwryteurturtrtyrtyrtyQQy4613874'
 
 @app.route('/')
 def index():
@@ -51,13 +52,15 @@ def homeonwer():
 
 @app.route('/user/<id>',methods=['GET'])
 def user_by_id(id):
-        query = {"_id": ObjectId(id)}
-        result = userCollection.find_one(query)
-        if result:
-            return render_template("homeUser.html", data = result)
-        else: 
+        try:
+            query = {"_id": ObjectId(id)}
+            result = userCollection.find_one(query)
+            if result:
+                return render_template("homeUser.html", data = result)
+            else: 
+                return render_template("404.html")
+        except:
             return render_template("404.html")
-
 @app.route('/user/<id>',methods=['DELETE'])
 def delete_user(id):
     try:  
@@ -279,6 +282,31 @@ def up_apartment(id):
        return render_template("addapartament.html", status = False)
 
 
+@app.route('/signinuser', methods=['POST'])
+def signinuser():
+    user = request.form.get('email')
+    status = "E"
+    password = request.form.get('password')
+    query = {"email":user, "password": password}
+    result = userCollection.find_one(query)
+    if result:
+        session['user'] = str(result['_id']) 
+        return render_template("homeUser.html", data = result)
+    else:
+        return status
+
+@app.route('/signinonwer', methods=['POST'])
+def signinonwer():
+    user = request.form.get('emailPrio')
+    status = "E"
+    password = request.form.get('passwordPrio')
+    query = {"email":user, "password": password}
+    result = onwerCollection.find_one(query)
+    if result:
+        session['user'] = str(result['_id']) 
+        return render_template("homeOnwer.html", data = result)
+    else:
+        return render_template("signin.html", status = status)
 
 
 if __name__ == '__main__':
