@@ -4,91 +4,93 @@
 Lista de Apartamentos
 {% endblock %}
 {% block content %}
-<div class="page-apartment">
+<div class="container">
+  <div class="page-apartment">
     <div class="row">
-        {% for apartment in data %}
-        <div class="col-lg-6">
-            <div class="card mt-4">
-                
-                <div class="row">
-                    <div class="col-lg-6 p-4">
-                        <a href="/apartment/{{apartment._id}}">
-                        <img class="img-fluid" src="{{url_for('static', filename='img/uploads/'+apartment.image_featured)}}"
-                            alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <h4 class="mt-5">{{apartment.name}}</h4>
-                        <p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{apartment.country}} - {{apartment.city}}</p>
-                        <p class="mb-0"><i class="fas fa-map-marked-alt"></i> {{apartment.address}}</p>
-                        <form id="form">
-                            <p class="clasificacion">
-                            {% if apartment.assessment == 5%}
-                              <input id="radio1" type="radio" name="estrellas" value="5" checked>
-                              <label class="label" for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4">
-                              <label class="label" for="radio2">★</label>
-                              <input  id="radio3" type="radio" name="estrellas" value="3">
-                              <label class="label" for="radio3">★</label>
-                              <input  id="radio4" type="radio" name="estrellas" value="2">
-                              <label class="label" for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1">
-                              <label class="label" for="radio5">★</label>
-                            {% elif apartment.assessment == 4 %}
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                              <label class="label" for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4" checked>
-                              <label class="label" for="radio2">★</label>
-                              <input  id="radio3" type="radio" name="estrellas" value="3">
-                              <label class="label" for="radio3">★</label>
-                              <input  id="radio4" type="radio" name="estrellas" value="2">
-                              <label class="label" for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1">
-                              <label class="label" for="radio5">★</label>
-                            {% elif apartment.assessment == 3 %}
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                              <label class="label" for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4">
-                              <label class="label" for="radio2">★</label>
-                              <input  id="radio3" type="radio" name="estrellas" value="3" checked>
-                              <label class="label" for="radio3">★</label>
-                              <input  id="radio4" type="radio" name="estrellas" value="2">
-                              <label class="label" for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1">
-                              <label class="label" for="radio5">★</label>
-                            {% elif apartment.assessment == 2 %}
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                              <label class="label" for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4">
-                              <label class="label" for="radio2">★</label>
-                              <input  id="radio3" type="radio" name="estrellas" value="3">
-                              <label class="label" for="radio3">★</label>
-                              <input  id="radio4" type="radio" name="estrellas" value="2" checked>
-                              <label class="label" for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1">
-                              <label class="label" for="radio5">★</label>
-                            {% elif apartment.assessment == 1 %}
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                              <label class="label" for="radio1">★</label>
-                              <input id="radio2" type="radio" name="estrellas" value="4">
-                              <label class="label" for="radio2">★</label>
-                              <input  id="radio3" type="radio" name="estrellas" value="3">
-                              <label class="label" for="radio3">★</label>
-                              <input  id="radio4" type="radio" name="estrellas" value="2">
-                              <label class="label" for="radio4">★</label>
-                              <input id="radio5" type="radio" name="estrellas" value="1" checked>
-                              <label class="label" for="radio5">★</label>
-                            {% endif %}
-                            </p>
-                          </form>
-                          <h6><i class="fas fa-tags"></i> {{apartment.nigth_value}}</h6> 
-                         <a href="/apartment/{{apartment._id}}"><button class="btn btn-light float-end mt-5 me-2 mb-2">Ver mas</button> </a> 
+      {% for apartment in data %}
+      <div class="col-lg-6">
+        <div class="card mt-4">
 
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-lg-6 p-4">
+              <a href="/apartment/{{apartment._id}}">
+                <img class="img-fluid" src="{{url_for('static', filename='img/uploads/'+apartment.image_featured)}}"
+                  alt="">
+              </a>
             </div>
+            <div class="col-lg-6">
+              <h4 class="mt-5">{{apartment.name}}</h4>
+              <p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{apartment.country}} - {{apartment.city}}</p>
+              <p class="mb-0"><i class="fas fa-map-marked-alt"></i> {{apartment.address}}</p>
+              <form id="form">
+                <p class="clasificacion">
+                  {% if apartment.assessment == 5%}
+                  <input id="radio1" type="radio" name="estrellas" value="5" checked>
+                  <label class="label" for="radio1">★</label>
+                  <input id="radio2" type="radio" name="estrellas" value="4">
+                  <label class="label" for="radio2">★</label>
+                  <input id="radio3" type="radio" name="estrellas" value="3">
+                  <label class="label" for="radio3">★</label>
+                  <input id="radio4" type="radio" name="estrellas" value="2">
+                  <label class="label" for="radio4">★</label>
+                  <input id="radio5" type="radio" name="estrellas" value="1">
+                  <label class="label" for="radio5">★</label>
+                  {% elif apartment.assessment == 4 %}
+                  <input id="radio1" type="radio" name="estrellas" value="5">
+                  <label class="label" for="radio1">★</label>
+                  <input id="radio2" type="radio" name="estrellas" value="4" checked>
+                  <label class="label" for="radio2">★</label>
+                  <input id="radio3" type="radio" name="estrellas" value="3">
+                  <label class="label" for="radio3">★</label>
+                  <input id="radio4" type="radio" name="estrellas" value="2">
+                  <label class="label" for="radio4">★</label>
+                  <input id="radio5" type="radio" name="estrellas" value="1">
+                  <label class="label" for="radio5">★</label>
+                  {% elif apartment.assessment == 3 %}
+                  <input id="radio1" type="radio" name="estrellas" value="5">
+                  <label class="label" for="radio1">★</label>
+                  <input id="radio2" type="radio" name="estrellas" value="4">
+                  <label class="label" for="radio2">★</label>
+                  <input id="radio3" type="radio" name="estrellas" value="3" checked>
+                  <label class="label" for="radio3">★</label>
+                  <input id="radio4" type="radio" name="estrellas" value="2">
+                  <label class="label" for="radio4">★</label>
+                  <input id="radio5" type="radio" name="estrellas" value="1">
+                  <label class="label" for="radio5">★</label>
+                  {% elif apartment.assessment == 2 %}
+                  <input id="radio1" type="radio" name="estrellas" value="5">
+                  <label class="label" for="radio1">★</label>
+                  <input id="radio2" type="radio" name="estrellas" value="4">
+                  <label class="label" for="radio2">★</label>
+                  <input id="radio3" type="radio" name="estrellas" value="3">
+                  <label class="label" for="radio3">★</label>
+                  <input id="radio4" type="radio" name="estrellas" value="2" checked>
+                  <label class="label" for="radio4">★</label>
+                  <input id="radio5" type="radio" name="estrellas" value="1">
+                  <label class="label" for="radio5">★</label>
+                  {% elif apartment.assessment == 1 %}
+                  <input id="radio1" type="radio" name="estrellas" value="5">
+                  <label class="label" for="radio1">★</label>
+                  <input id="radio2" type="radio" name="estrellas" value="4">
+                  <label class="label" for="radio2">★</label>
+                  <input id="radio3" type="radio" name="estrellas" value="3">
+                  <label class="label" for="radio3">★</label>
+                  <input id="radio4" type="radio" name="estrellas" value="2">
+                  <label class="label" for="radio4">★</label>
+                  <input id="radio5" type="radio" name="estrellas" value="1" checked>
+                  <label class="label" for="radio5">★</label>
+                  {% endif %}
+                </p>
+              </form>
+              <h6><i class="fas fa-tags"></i> {{apartment.nigth_value}}</h6>
+              <a href="/apartment/{{apartment._id}}"><button class="btn btn-light float-end mt-5 me-2 mb-3">Ver mas</button> </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-        {% endfor %}
-</div>
+  </div>
 </div>
 {% endblock %}

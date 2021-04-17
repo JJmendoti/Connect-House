@@ -36,6 +36,12 @@
     width: 100%;
   }
 
-
+  .banner {
+    border-radius: 10px;
+    min-height: 60vh;
+    background-image: url('../img/banner.jpg');
+    color: white;
+    padding: 50px;
+  }
 
 

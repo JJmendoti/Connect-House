@@ -265,8 +265,16 @@ body {
 .carousel__indicadores .glider-dot.active {
 	opacity: 1;
 }
-=======
+
 .card:hover {
     box-shadow: 1px -1px 5px #000000;
+    
 }
->>>>>>> 619763d5023952674ed0fb0d5f80772606967723
+.card {
+    border-radius: 4px;
+}
+
+.btn-light:hover {
+    background:#070707a2;
+    color: white;
+}
