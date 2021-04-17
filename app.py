@@ -101,7 +101,7 @@ def send_user():
     f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     city = request.form.get('city')
     password = request.form.get('password')
-    user = {"name": name, "ident":ident, "email": email, "avatar": filename, "country": country, "city": city, "password":password}
+    user = {"name": name, "ident":ident, "email": email , "avatar": filename, "country": country, "city": city, "password":password}
     save = userCollection.insert_one(user)
     if save:
         return render_template("signup.html", status = "Y")
@@ -258,15 +258,17 @@ def send_apartment():
     country = request.form.get('country')
     city = request.form.get('city')
     address = request.form.get('address')
-    image = request.files['images']
-    imagename = secure_filename(image.filename)
-    image.save(os.path.join(app.config['UPLOAD_FOLDER'], imagename))
+    images = request.files.getlist('images[]')
+    names_img = []
+    for image in images:
+        image.save(os.path.join(app.config['UPLOAD_FOLDER'], image.filename))   
+        names_img.append(image.filename) 
     image_featured = request.files['outstandingImage']
     image_featured_name = secure_filename(image_featured.filename)
     image_featured.save(os.path.join(app.config['UPLOAD_FOLDER'], image_featured_name))
     nigth_value = request.form.get('nightValue')
     review = request.form.get('review')
-    apartment = {"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":imagename, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
+    apartment = {"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
     save = apartmentsCollection.insert_one(apartment)
     if save:
         return render_template("addapartament.html", status = "Y")
