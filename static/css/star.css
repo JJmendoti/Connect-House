@@ -34,6 +34,8 @@
 
   .img-view {
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
   }
 
   .banner {
@@ -44,4 +46,31 @@
     padding: 50px;
   }
 
+  .info {
+    background-color: white;
+    width: 100%; 
+    height: 100%;
+    padding: 45px;
+    border-radius: 5px;
+  }
 
+  .justify {
+    text-align: justify;
+  }
+
+  .segurity {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #i-cross {
+    width: 90%;
+  }
+
+  .btn-view {
+    width: 100%;
+  }

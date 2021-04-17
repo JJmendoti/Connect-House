@@ -8,15 +8,51 @@ Lista de Apartamentos
   <div class="page-apartment">
     <div class="row mt-5 ">
       <div class="col-lg-6">
-        <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'])}}" />
+        <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image_featured'])}}" />
       </div>
       <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][0])}}" />
+          </div>
+          <div class="col-lg-6">
+            <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][1])}}" />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-6">
+            <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][2])}}" />
+          </div>
+          <div class="col-lg-6">
+            <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][3])}}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="segurity">
+          <div class="row">
+            <div class="col-lg-1 text-center">
+              <img id="i-cross" src="{{url_for('static', filename='img/doctor.png')}}" />
+            </div>
+            <div class="col-lg-11">
+              <p><strong>Medidas de salud y seguridad especiales</strong></p>
+          <p class="lh-1 mb-0">Este alojamiento ha tomado medidas especiales de higiene y salud por que tu salud es lo mas importante <a href="#">Ver información sobre salud y seguridad</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
         <h3 class="">
-          {{data['name']}}
+          <i class="fas fa-hotel"></i> {{data['name']}}
         </h3>
-        <p class="mt-0"><i class="fas fa-map-marker-alt"></i> {{data['country']}} - {{data['city']}}</p>
-        <p class="mt-0"><i class="fas fa-map-marked-alt"></i> {{data['address']}}</p>
+        <p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{data['country']}} - {{data['city']}}</p>
+        <p class="mb-0"><i class="fas fa-map-marked-alt"></i> {{data['address']}}</p>
         <form id="form">
+          <p class="mb-0"><strong>Calificación:</strong> </p>
           <p class="clasificacion">
             {% if data['assessment'] == 5 %}
             <input id="radio1" type="radio" name="estrellas" value="5" checked>
@@ -76,9 +112,40 @@ Lista de Apartamentos
             {% endif %}
           </p>
         </form>
-        <p class="mt-0">{{data['review']}}</p>
-        <p class="mt-0"><i class="fas fa-tags"></i> {{data['nigth_value']}}</p>
-  
+        <p class="mb-1 mt-1"><strong>Descripción: </strong></p>
+        <p class="justify">{{data['review']}}</p>
+        <h6 class="mb-0"><i class="fas fa-tags"> </i> <strong>Valor por noche:</strong> {{data['nigth_value']}}</h6>
+      </div>
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="row">
+            <div class="col-lg-2 text-center"><i class="fas fa-map-marker-alt fa-2x"></i> </div>
+            <div class="col-lg-10 ">
+              <p class="lh-1"> La mejor ubicación. Los viajeros recientes le dan una puntuación alta (8,9)</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2 text-center"><i class="fas fa-bed fa-2x"></i> </div>
+            <div class="col-lg-10">
+              <p class="lh-1"> ¿Quieres dormir a pierna suelta? Este hotel tiene una puntuación muy alta por la comodidad de sus camas.</p>
+          </div>
+          <p class="mb-0">
+           <strong>Información sobre el desayuno</strong>
+          </p>
+          <p>Buffet</p>
+          <div class="row">
+            <div class="col-lg-2 text-center justify-content-center"><i class="fas fa-parking fa-3x"></i> </div>
+            <div class="col-lg-10">
+              <p class="lh-1"> Hay parking privado gratis en el hotel</p>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-lg-2 text-center"><i class="fas fa-tv fa-2x"></i> </div>
+            <div class="col-lg-10">
+              <p class="lh-1"> Todas las habitaciones tienen TV y aire acondicionado</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -95,3 +162,4 @@ Lista de Apartamentos
   </div>
 </div>
 {% endblock %}
+
