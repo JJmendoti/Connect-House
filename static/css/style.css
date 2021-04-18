@@ -1,5 +1,5 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,13 +11,13 @@ body {
 }
 
 /* BUSCADOR */
-.buscador{
+.buscador {
     border: 1px solid #f8f5f5;
     border-radius: 32px;
     color: #ffffff;
     box-shadow: 1px 2px 0px #d1cfcf;
     padding: 2px;
-    background-color: #ffffff ;
+    background-color: #ffffff;
     font-weight: bold;
 }
 
@@ -26,7 +26,8 @@ body {
     background-color: #141414;
     padding: 1rem 0 0.5rem 0;
 }
-.site-header.inicio{
+
+.site-header.inicio {
     background-image: url(/static/img/header.jpg);
     width: 100%;
     background-position: center center;
@@ -35,14 +36,15 @@ body {
     height: 30vh;
     min-height: 30rem;
     position: relative;
-    
+
 }
-.contenido-header h2{
+
+.contenido-header h2 {
     color: #fff;
     position: relative;
     top: 360px;
     text-align: center;
-    font-weight: 900;    
+    font-weight: 900;
 }
 
 /* Estilos de 404 */
@@ -242,70 +244,93 @@ body {
 
 /* --- --- CAROUSEL --- --- */
 .carousel__contenedor {
-	position: relative;
+    position: relative;
 }
 
 .carousel__anterior,
 .carousel__siguiente {
-	position: absolute;
-	display: block;
-	width: 30px;
-	height: 30px;
-	border: none;
-	top: calc(50% - 35px);
-	cursor: pointer;
-	line-height: 30px;
-	text-align: center;
-	background: none;
-	color: #efb810;
-	opacity: 2;
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #efb810;
+    opacity: 2;
 }
 
 .carousel__anterior:hover,
 .carousel__siguiente:hover {
-	opacity: 100%;
+    opacity: 100%;
 }
 
 .carousel__anterior {
-	left: -25px;
+    left: -25px;
 }
 
 .carousel__siguiente {
-	right: -25px;
+    right: -25px;
 }
 
 .carousel__lista {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 
 
 .carousel__indicadores .glider-dot {
-	display: block;
-	width: 30px;
-	height: 4px;
-	background: rgb(7, 7, 7);
-	opacity: .2;
-	border-radius: 0;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: rgb(7, 7, 7);
+    opacity: .2;
+    border-radius: 0;
 }
 
 .carousel__indicadores .glider-dot:hover {
-	opacity: .5;
+    opacity: .5;
 }
 
 .carousel__indicadores .glider-dot.active {
-	opacity: 1;
+    opacity: 1;
 }
 
 .card:hover {
     box-shadow: 1px -1px 5px #000000;
-    
+
 }
+
 .card {
     border-radius: 4px;
 }
 
 .btn-light:hover {
-    background:#070707a2;
+    background: #070707a2;
     color: white;
+}
+
+
+/* Experiencias */
+.item {
+    border: 1px solid #e7e6e6;
+    padding: 1px;
+    border-radius: 20px;
+    
+}
+.item-image {
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px #2c2a2a;
+}
+
+.item .item-details a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
 }
