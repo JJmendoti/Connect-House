@@ -245,6 +245,7 @@ body {
 /* --- --- CAROUSEL --- --- */
 .carousel__contenedor {
     position: relative;
+    
 }
 
 .carousel__anterior,
