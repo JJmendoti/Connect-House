@@ -9,54 +9,46 @@ Connect-House
     <div class="container-fluid">
         <div class="container">
             <div class="row buscador">
-                <div class="col-md-3">
-                    <form class="d-flex">
-                        <i class="fas fa-map-marked-alt text-warning fw-bold">
-                            <label class="form-label text-dark fw-bold ms-1" for="ubication">Ubicación</label>
-                        </i>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="ubication" type="text"
-                            placeholder="¿A dónde vas?" aria-label="text">
-                    </form>
+                <div class="col-sm-3 col-md-3">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-map-marked-alt text-danger fw-bold me-1"></i>
+                        <label class="form-label text-danger fw-bold" for="ubication">Ubicación</label>
+                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="ubication" type="text" placeholder="¿A dónde vas?" aria-label="text" p-2>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <form class="d-flex">
-                        <i class="fas fa-calendar-day text-warning fw-bold">
-                            <label class="form-label text-dark fw-bold ms-1" for="llegada">Llegada</label>
-                        </i>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill " id="llegada" type="date"
+                <div class="col-sm-3 col-md-3">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-calendar-check text-danger fw-bold me-1"></i>
+                        <label class="form-label text-danger fw-bold" for="salida">Salida</label>
+                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="salida" type="date"
                             placeholder="Agrega Fechas" aria-label="datetime">
-                    </form>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <form class="d-flex">
-                        <i class="fas fa-calendar-check text-warning fw-bold">
-                            <label class="form-label text-dark fw-bold ms-1" for="salida">Salida</label>
-                        </i>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill " id="salida" type="date"
+                <div class="col-sm-3 col-md-3">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-calendar-day text-danger fw-bold me-1"></i>
+                        <label class="form-label text-danger fw-bold" for="llegada">Llegada</label>
+                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="llegada" type="date"
                             placeholder="Agrega Fechas" aria-label="datetime">
-                    </form>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <form class="d-flex">
-                        <i class="fas fa-users text-warning fw-bold">
-                            <label class="form-label text-dark fw-bold ms-1" for="huespedes">Huéspedes</label>
-                        </i>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill " id="huespedes" type="text"
-                            placeholder="¿Cuántos?" aria-label="Search">
-                    </form>
-                </div>
-                <div class="col-md-1">
-                    <form class="d-flex">
-                        <button class="badge btn-outline-warning fw-bold text-dark fw-bold m-1 p-2 rounded-circle"
-                            type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
+                <div class="col-sm-3 col-md-3">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-users text-danger fw-bold me-1 text-center"></i>
+                        <label class="form-label text-danger fw-bold" for="huespedes">Viajeros</label>
+                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="huespedes" type="text" placeholder="¿Cuántos?" aria-label="Search">
+                            <div class="d-flex  align-items-center">
+                                <a class="btn btn-outline-danger fw-bold text-warning fw-bold rounded-circle ms-2"
+                                    type="submit">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="contenido-header">
-            <h2>Los anfitriones lo hacen posible</h2>
+            <h2>¡Los anfitriones lo hacen posible!</h2>
         </div>
     </div>
 </header>
@@ -264,7 +256,7 @@ Connect-House
                     <figure class="figure">
                         <img src="/static/img/Vive/v1.jpg" class="figure-img img-fluid rounded" alt="vive images">
                         <figcaption class="figure-caption">
-                            <h4 class="text-center text-dark">Alojamientos Enteros</h4>
+                            <h4 class="d-flex text-center text-dark">Alojamientos Enteros</h4>
                         </figcaption>
                     </figure>
                 </div>
@@ -318,8 +310,8 @@ Connect-House
                     <img class="item-image" src="/static/img/descubre/d1.jpg">
                 </div>
                 <p class="item-details">
-                    <a class="badge bg-info  rounded-pill text-decoration-none " data-bs-toggle="collapse" href="#enlinea" role="button"
-                        aria-expanded="false" aria-controls="enlinea">
+                    <a class="badge bg-info  rounded-pill text-decoration-none " data-bs-toggle="collapse"
+                        href="#enlinea" role="button" aria-expanded="false" aria-controls="enlinea">
                         Experiencias en línea
                     </a>
                 </p>
@@ -334,8 +326,8 @@ Connect-House
                     <img class="item-image" src="/static/img/descubre/d2.jpg">
                 </div>
                 <p class="item-details">
-                    <a class="badge bg-info  rounded-pill text-decoration-none" data-bs-toggle="collapse" href="#experienias" role="button"
-                        aria-expanded="false" aria-controls="experienias">
+                    <a class="badge bg-info  rounded-pill text-decoration-none" data-bs-toggle="collapse"
+                        href="#experienias" role="button" aria-expanded="false" aria-controls="experienias">
                         Experiencias
                     </a>
                 </p>
@@ -350,8 +342,8 @@ Connect-House
                     <img class="item-image" src="/static/img/descubre/d3.jpg">
                 </div>
                 <p class="item-details">
-                    <a class="badge bg-info  rounded-pill text-decoration-none " data-bs-toggle="collapse" href="#aventura" role="button"
-                        aria-expanded="false" aria-controls="aventura">
+                    <a class="badge bg-info  rounded-pill text-decoration-none " data-bs-toggle="collapse"
+                        href="#aventura" role="button" aria-expanded="false" aria-controls="aventura">
                         Aventuras
                     </a>
                 </p>
