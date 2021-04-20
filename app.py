@@ -235,15 +235,16 @@ def apartment_by_id(id):
 #         else:
 #             return jsonify({'status':'404'})
 
-@app.route('/apartment/<id>',methods=['DELETE'])
-def delete_apartment(id):
+@app.route('/delete-apartment',methods=['POST'])
+def delete_apartment():
     try:  
+        id = request.form.get('id')
         query = {"_id": ObjectId(id)}
         delete = apartmentsCollection.delete_one(query)
-        if delete:
-            return render_template("index.html", delete = True)
+        if delete.deleted_count > 0:
+            return redirect(url_for('homeonwer'))
         else:
-            return render_template("index.html", delete = False)
+            return redirect(url_for('index'))
     except:
         return render_template("404.html")
 
