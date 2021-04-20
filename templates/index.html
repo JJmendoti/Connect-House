@@ -40,8 +40,7 @@ Connect-House
                         <input class="form-control fw-bold m-1 p-2 rounded-pill" id="huespedes" type="text"
                             placeholder="¿Cuántos?" aria-label="Search">
                         <div class="d-flex  align-items-center">
-                            <a class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2"
-                                type="submit">
+                            <a class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2" type="submit">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
@@ -57,56 +56,23 @@ Connect-House
 
 
 <div class="page">
-    <div class="container">
-        <div class="carousel">
-            <div class="carousel__contenedor">
-                <button aria-label="Anterior" class="carousel__anterior">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <div class="carousel__lista">
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/1.jpeg" alt="Rock and Roll Hall of Fame">
-
-                    </div>
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/2.jpeg" alt="Constitution Square - Tower I">
-
-                    </div>
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/3.jpeg" alt="Empire State Building">
-
-                    </div>
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/4.jpeg" alt="Harmony Tower">
-
-                    </div>
-
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/5.jpeg" alt="Empire State Building">
-
-                    </div>
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/6.jpeg" alt="Harmony Tower">
-
-                    </div>
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/7.jfif" alt="Empire State Building">
-
-                    </div>
-                    <div class="carousel__elemento">
-                        <img src="/static/img/slider/8.jpeg" alt="Harmony Tower">
-                    </div>
-                </div>
-
-                <button aria-label="Siguiente" class="carousel__siguiente">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+    <div class="container-fluid">
+        <div id="scroller">
+            <div class="nav">
+                <a class="prev">&laquo;</a>
+                <a class="next">&raquo;</a>
             </div>
-
-            <div role="tablist" class="carousel__indicadores"></div>
+            <div class="item"><img src="/static/img/slider/8.jpeg" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/6.jpeg" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/5.jpeg" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/4.jpeg" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/3.jpeg" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/2.jpeg" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/7.jfif" alt="Images Slider"></div>
+            <div class="item"><img src="/static/img/slider/1.jpeg" alt="Images Slider"></div>
         </div>
-
+    </div>
+    <div class="container container-page">
         <div class="container bg-light mb-3 pb-2 p-3 rounded-2">
             <h2 class="text-dark fw-bold">Explora cerca de ti</h2>
             <div class="row mt-3">
@@ -342,8 +308,8 @@ Connect-House
                     <img class="item-image" src="/static/img/descubre/d3.jpg">
                 </div>
                 <p class="item-details  text-center">
-                    <button class="btn btn-warning  rounded-pill  " data-bs-toggle="collapse"
-                        href="#aventura" role="button" aria-expanded="false" aria-controls="aventura">
+                    <button class="btn btn-warning  rounded-pill  " data-bs-toggle="collapse" href="#aventura"
+                        role="button" aria-expanded="false" aria-controls="aventura">
                         Aventuras
                     </button>
                 </p>
