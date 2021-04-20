@@ -340,3 +340,15 @@ body {
     align-items: center;
     text-decoration: none;
 }
+.item-image {
+opacity: .5;
+}
+.item-image:hover {
+    opacity: 5;
+}
+.figure {
+opacity: .7;
+}
+.figure:hover {
+    opacity: 5;
+}
