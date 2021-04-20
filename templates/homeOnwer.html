@@ -9,22 +9,119 @@ Perfil Propietario
         <div class="col-lg-2 data-user">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <img class="rounded-circle user-img mt-5" src="{{url_for('static', filename='img/uploads/'+data['avatar'])}}" alt="">
+                    <img class="rounded-circle user-img mt-5"
+                        src="{{url_for('static', filename='img/uploads/'+data['avatar'])}}" alt="">
                     <h6 class="title-user mt-2">{{data['name']}}</h6>
                     <ul class="list-group mt-4">
-                        <li class="list-group-item"><i class="fas fa-id-card me-2"> Identificación:</i><br>{{data['ident']}}</li>
-                        <li class="list-group-item"><i class="fas fa-envelope me-2"> Email:</i><br>{{data['email']}}</li>
-                        <li class="list-group-item"><i class="fas fa-globe-americas me-2"> Pais:</i><br>{{data['country']}}</li>
-                        <li class="list-group-item"><i class="fas fa-building me-2"> Ciudad:</i><br>{{data['city']}}</li>
-                      </ul>
+                        <li class="list-group-item"><i class="fas fa-id-card me-2">
+                                Identificación:</i><br>{{data['ident']}}</li>
+                        <li class="list-group-item"><i class="fas fa-envelope me-2"> Email:</i><br>{{data['email']}}
+                        </li>
+                        <li class="list-group-item"><i class="fas fa-globe-americas me-2">
+                                Pais:</i><br>{{data['country']}}</li>
+                        <li class="list-group-item"><i class="fas fa-building me-2"> Ciudad:</i><br>{{data['city']}}
+                        </li>
+                    </ul>
 
-                      <a href="/signout"><button class="btn btn-light mt-5">Cerrar Sesión</button></a>
+                    <a href="/signout"><button class="btn btn-light mt-5">Cerrar Sesión</button></a>
                 </div>
             </div>
         </div>
-            
-        <div class="col-lg-10 apartments">
 
+        <div class="col-lg-10 apartments">
+        {% if apartments[0] %}
+            {% for apartment in apartments %}
+            <div class="col-lg-6">
+                <div class="card mt-4">
+
+                    <div class="row">
+                        <div class="col-lg-6 p-4">
+                            <a href="/onwer-apartment/{{apartment._id}}">
+                                <img class="img-fluid"
+                                    src="{{url_for('static', filename='img/uploads/'+apartment.image_featured)}}"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="mt-5">{{apartment.name}}</h4>
+                            <p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{apartment.country}} -
+                                {{apartment.city}}</p>
+                            <p class="mb-0"><i class="fas fa-map-marked-alt"></i> {{apartment.address}}</p>
+                            <form id="form">
+                                <p class="clasificacion">
+                                    {% if apartment.assessment == 5%}
+                                    <input id="radio1" type="radio" name="estrellas" value="5" checked>
+                                    <label class="label" for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4">
+                                    <label class="label" for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3">
+                                    <label class="label" for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2">
+                                    <label class="label" for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                    <label class="label" for="radio5">★</label>
+                                    {% elif apartment.assessment == 4 %}
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label class="label" for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4" checked>
+                                    <label class="label" for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3">
+                                    <label class="label" for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2">
+                                    <label class="label" for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                    <label class="label" for="radio5">★</label>
+                                    {% elif apartment.assessment == 3 %}
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label class="label" for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4">
+                                    <label class="label" for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3" checked>
+                                    <label class="label" for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2">
+                                    <label class="label" for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                    <label class="label" for="radio5">★</label>
+                                    {% elif apartment.assessment == 2 %}
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label class="label" for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4">
+                                    <label class="label" for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3">
+                                    <label class="label" for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2" checked>
+                                    <label class="label" for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                    <label class="label" for="radio5">★</label>
+                                    {% elif apartment.assessment == 1 %}
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label class="label" for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4">
+                                    <label class="label" for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3">
+                                    <label class="label" for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2">
+                                    <label class="label" for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1" checked>
+                                    <label class="label" for="radio5">★</label>
+                                    {% endif %}
+                                </p>
+                            </form>
+                            <div class="view-btn d-flex flex-row align-items-center">
+                                <h6 class="mb-0"><i class="fas fa-tags"></i> {{apartment.nigth_value}}</h6>
+                                <a href="/onwer-apartment/{{apartment._id}}"><button class="btn btn-light ms-5 btn-view"> <i class="fas fa-binoculars"></i> Ver mas</button> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% else %}
+                <div class="row">
+                        <p>melos</p>
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>

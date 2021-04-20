@@ -45,7 +45,8 @@ def homeonwer():
     if session['user']:
         query = {"_id": ObjectId(session['user'])}
         result = onwerCollection.find_one(query)
-        return render_template('homeUser.html', data = result)
+        apartment_result = apartmentsCollection.find({"idonwer": session['user']})
+        return render_template('homeOnwer.html', data = result, apartments = apartment_result)
 
 @app.route('/signout')
 def signout():
@@ -204,6 +205,16 @@ def up_onwer(id):
             return render_template("signup.html", status = False)
      except:
         return render_template("404.html")
+
+@app.route('/onwer-apartment/<id>',methods=['GET'])
+def onwer_apartment(id):
+        query = {"_id": ObjectId(id)}
+        result = apartmentsCollection.find_one(query)
+        if result:
+            return render_template("viewApartment.html", data = result)
+        else: 
+            return render_template("404.html")
+
 # #esquema y rutas de apartamentos
 
 
