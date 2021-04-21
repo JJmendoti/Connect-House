@@ -40,7 +40,8 @@ Connect-House
                         <input class="form-control fw-bold m-1 p-2 rounded-pill" id="huespedes" type="text"
                             placeholder="¿Cuántos?" aria-label="Search">
                         <div class="d-flex  align-items-center">
-                            <a class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2" type="submit">
+                            <a class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2"
+                                type="submit">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
@@ -56,23 +57,56 @@ Connect-House
 
 
 <div class="page">
-    <div class="container-fluid ">
-        <div id="scroller">
-            <div class="nav">
-                <a class="prev">&laquo;</a>
-                <a class="next">&raquo;</a>
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel__lista">
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/1.jpeg" alt="Rock and Roll Hall of Fame">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/2.jpeg" alt="Constitution Square - Tower I">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/3.jpeg" alt="Empire State Building">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/4.jpeg" alt="Harmony Tower">
+
+                    </div>
+
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/5.jpeg" alt="Empire State Building">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/6.jpeg" alt="Harmony Tower">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/7.jfif" alt="Empire State Building">
+
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/static/img/slider/8.jpeg" alt="Harmony Tower">
+                    </div>
+                </div>
+
+                <button aria-label="Siguiente" class="carousel__siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="item"><img src="/static/img/slider/8.jpeg" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/6.jpeg" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/5.jpeg" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/4.jpeg" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/3.jpeg" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/2.jpeg" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/7.jfif" width="200" height="250"alt="Images Slider"></div>
-            <div class="item"><img src="/static/img/slider/1.jpeg" width="200" height="250"alt="Images Slider"></div>
+
+            <div role="tablist" class="carousel__indicadores"></div>
         </div>
-    </div>
-    <div class="container container-page">
+
         <div class="container bg-light mb-3 pb-2 p-3 rounded-2">
             <h2 class="text-dark fw-bold">Explora cerca de ti</h2>
             <div class="row mt-3">
@@ -270,6 +304,7 @@ Connect-House
         <p class="display-6">Actividades únicas con expertos locales,
             en persona o en línea.
         </p>
+
         <div class="row">
             <div class="col-12 col-md-8 col-lg-4">
                 <div class="item shadow  mb-4 ">
@@ -308,8 +343,8 @@ Connect-House
                     <img class="item-image" src="/static/img/descubre/d3.jpg">
                 </div>
                 <p class="item-details  text-center">
-                    <button class="btn btn-warning  rounded-pill  " data-bs-toggle="collapse" href="#aventura"
-                        role="button" aria-expanded="false" aria-controls="aventura">
+                    <button class="btn btn-warning  rounded-pill  " data-bs-toggle="collapse"
+                        href="#aventura" role="button" aria-expanded="false" aria-controls="aventura">
                         Aventuras
                     </button>
                 </p>
