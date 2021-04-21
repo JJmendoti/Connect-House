@@ -10,7 +10,10 @@ $(document).ready(function(){
 
 
 
-// Carousel Discover 
+
+ // Carousel Discover 
+
+
 // let itemPositions = [];
 // let numberOfItems = $('#scroller .item').length;
 
@@ -67,3 +70,8 @@ $(document).ready(function(){
 // });
 
 // Fin Carousel Discover 
+$(function () {
+$('.carousel').carousel({
+    interval: 5000
+});
+});
