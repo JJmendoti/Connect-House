@@ -60,3 +60,23 @@ window.addEventListener("load", function () {
   });
 });
 
+
+
+// BOTON GO TO TOP
+let btnTop = document.getElementById("back-to-top").value;
+
+window.onscroll = function() {backtop()};
+
+function backtop() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
