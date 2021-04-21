@@ -76,6 +76,7 @@ Agregar apartamento
                                 <label for="">Reseña del Inmueble:</label>
                                 <textarea class="form-control mt-1" id="review" name="review" placeholder="Ingresa una reseña de tu inmueble"></textarea>
                             </div>
+                            <input type="text" class="d-none" name="idonwer" value="{{session['user']}}">
                         </div>
                         <div class="col mt-4 text-center">
                             <input class="btn-submit" type="submit" value="Guardar Inmueble">

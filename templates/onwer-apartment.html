@@ -1,10 +1,26 @@
-% extends './layout/layout.html' %}
+{% extends './layout/layout.html' %}
 
 {% block title %}
 Lista de Apartamentos
 {% endblock %}
 {% block content %}
 <div class="container">
+    <div class="row mt-4 ps-1">
+        <div class="col-lg-1">
+            <a href="/homeonwer" class="back align-middle"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="col-lg-9"></div>
+        <div class="col-lg-1">
+            <button class="btn"><a href="/" class="lin"><i class="fas fa-edit"></i> Editar</a></button>
+        </div>
+        <div class="col-lg-1">
+            <form>
+                <input type="text" class="d-none" value="{{data['_id']}}">
+                <button type="submit" class="btn"><i class="fas fa-trash-alt"></i> Eliminar</button>
+            </form>
+            
+        </div>
+    </div>
   <div class="page-apartment">
     <div class="row mt-5 ">
       <div class="col-lg-6">

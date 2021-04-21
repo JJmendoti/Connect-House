@@ -211,7 +211,7 @@ def onwer_apartment(id):
         query = {"_id": ObjectId(id)}
         result = apartmentsCollection.find_one(query)
         if result:
-            return render_template("viewApartment.html", data = result)
+            return render_template("onwer-apartment.html", data = result)
         else: 
             return render_template("404.html")
 
