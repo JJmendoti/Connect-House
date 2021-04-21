@@ -58,6 +58,11 @@ def err():
     session.clear()
     return render_template('404.html')
 
+@app.route('/discover')
+def discover():
+    return render_template('discover.html')
+
+
 # @app.route('/user/', methods=['GET'])
 # def user():
 #     result = userCollection.find()

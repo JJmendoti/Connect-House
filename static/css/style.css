@@ -361,7 +361,7 @@ body {
 }
 
 .footer-page p {
-  color: white;
+
   text-align: center;
 }
 
@@ -477,9 +477,10 @@ p {
 }
 
 .dk-footer .contact-us {
-  margin-top: 0;
+  margin-top: 15px;
   margin-bottom: 30px;
   padding-left: 80px;
+  align-items: center;
 }
 
 .dk-footer .contact-us .contact-info {
@@ -532,6 +533,7 @@ p {
   margin-right: 5px;
   color: #efb810;
 }
+
 
 .dk-footer-box-info .footer-social-link a i.fa-facebook {
   background-color: #f2f4f86c;
