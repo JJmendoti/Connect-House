@@ -249,16 +249,16 @@ body {
 
 /* --- --- CAROUSEL --- --- */
 #scroller{
-    width: 500px;
-    height: 200px;
+    width: 300px;
+    height: 10px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding:  10px;
     -webkit-perspective: 500px;
     -moz-perspective: 500px;
     -o-perspective: 500px;
 }
 #scroller .item {
-    width: 500px;
+    width: 200px;
     display: block;
     position: absolute;
     border-radius: 10px;
@@ -270,7 +270,7 @@ body {
   }
   #scroller .item:before {
     border-radius: 10px;
-    width: 500px;
+    width: 200px;
     display: block;
     content: '';
     position: absolute;
@@ -315,9 +315,9 @@ body {
 }
 .nav {
   position: absolute;
-  width: 500px;
-  height: 30px;
-  margin: 170px 0 0;
+  width: 200px;
+  height: 10px;
+  margin: 118px 0 0;
   z-index: 2;
   display: none;
 }
@@ -348,7 +348,7 @@ body {
 
 .container-page{
     position: relative;
-    margin-top: 488px;
+    margin-top: 300px;
 }
 
 
