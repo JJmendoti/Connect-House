@@ -62,6 +62,11 @@ def err():
 def discover():
     return render_template('discover.html')
 
+@app.route('/update')
+def update():
+    return render_template('updateApartment.html')
+
+
 
 # @app.route('/user/', methods=['GET'])
 # def user():

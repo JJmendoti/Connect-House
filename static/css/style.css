@@ -149,14 +149,21 @@ body {
   min-height: 85vh;
   background-image: url('/static/img/signup.jpg');
   background-repeat: no-repeat;
-  /* padding: 20px 0 0 100px; */
+  padding: 20px 0 0 100px;
+  background-size: 100% 100%;
+}
+
+.apartment {
+  min-height: 85vh;
+  background-image: url('/static/img/apartment.jpg');
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 
 
 .form-signin{
-  background-color: rgba(92, 92, 92, 0.5);
+  background-color: rgba(92, 92, 92, 0.4);
   padding: 50px;
   border-radius: 10px;
   color: white;
