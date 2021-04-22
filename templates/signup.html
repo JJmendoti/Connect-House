@@ -17,85 +17,150 @@ Sign Up
 {% endif %}
 <div class="container-fluid signin page-sign">
   <!-- Formulario para usuarios -->
-  <div class="row"> 
+  <div class="row">
     <div class="col"></div>
     <div class="col-md-10 col-lg-10  form-register-user">
-        <div class="card rounded-pill mt-3  bg-transparent">
+      <div class="card rounded-pill mt-3  bg-transparent">
+        <div class="row">
+          <div class="col title-signin">
+            <h2 id="title-sign">Registro de usuarios</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col"></div>
+        <div class="col-lg-10 form-signin mt-2">
+          <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data" action=""
+            onsubmit="return validateFields();">
             <div class="row">
-              <div class="col title-signin">
-                <h2 id="title-sign">Registro de usuarios</h2>
+              <div class="col">
+                <label for="">Nombre:</label>
+                <input type="text" class="form-control mt-1" name="name" id="name" placeholder="Ingresa tu nombre">
+              </div>
+              <div class="col">
+                <label for="">Documento:</label>
+                <input type="text" class="form-control mt-1" name="identification" id="identification"
+                  placeholder="Ingresa tu documento">
               </div>
             </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col"></div>
-          <div class="col-lg-10 form-signin mt-2 ">
-            <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data" action=""
-              onsubmit="return validateFields();">
-              <div class="row">
-                <div class="col">
-                  <label for="">Nombre:</label>
-                  <input type="text" class="form-control mt-1" name="name" id="name" placeholder="Ingresa tu nombre">
-                </div>
-                <div class="col">
-                  <label for="">Documento:</label>
-                  <input type="text" class="form-control mt-1" name="identification" id="identification"
-                    placeholder="Ingresa tu documento">
-                </div>
+            <div class="row mt-4">
+              <div class="col">
+                <label for="">Ciudad:</label>
+                <input type="text" class="form-control mt-1" name="city" id="city"
+                  placeholder="Ingresa la ciudad donde vives">
               </div>
-              <div class="row mt-4">
-                <div class="col">
-                  <label for="">Ciudad:</label>
-                  <input type="text" class="form-control mt-1" name="city" id="city"
-                    placeholder="Ingresa la ciudad donde vives">
-                </div>
-                <div class="col">
-                  <label for="">Pais:</label>
-                  <input type="text" class="form-control mt-1" name="country" id="country"
-                    placeholder="Ingresa el Pais donde vives">
-                </div>
+              <div class="col">
+                <label for="">Pais:</label>
+                <input type="text" class="form-control mt-1" name="country" id="country"
+                  placeholder="Ingresa el Pais donde vives">
               </div>
-              <div class="row mt-4">
-                <div class="col">
-                  <label for="">Imagen de perfil:</label>
-                  <input type="file" class="form-control mt-1" name="avatar" id="avatar"
-                    placeholder="Ingresa tu imagen de perfil">
-                </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <label for="">Imagen de perfil:</label>
+                <input type="file" class="form-control mt-1" name="avatar" id="avatar"
+                  placeholder="Ingresa tu imagen de perfil">
               </div>
-              <div class="row mt-4">
-                <div class="col">
-                  <label for="">Correo:</label>
-                  <input type="text" class="form-control mt-1" name="email" id="email" placeholder="Ingresa tu correo">
-                  <a id="go-property-register" class="float-start link-form"><span>¿Eres
-                      propietario?</span></a>
-                </div>
-                <div class="col">
-                  <label for="">Contraseña:</label>
-                  <input type="password" class="form-control mt-1" name="password" id="password"
-                    placeholder="Ingresa una contraseña">
-                  <a class="float-end link-form" href="/signin"><span>Iniciar Sesión</span></a>
-                </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <label for="">Correo:</label>
+                <input type="text" class="form-control mt-1" name="email" id="email" placeholder="Ingresa tu correo">
+                <a id="go-property-register" class="float-start link-form"><span>¿Eres
+                    propietario?</span></a>
+              </div>
+              <div class="col">
+                <label for="">Contraseña:</label>
+                <input type="password" class="form-control mt-1" name="password" id="password"
+                  placeholder="Ingresa una contraseña">
+                <a class="float-end link-form text-decoration-none" href="/signin"><span>Iniciar Sesión</span></a>
+              </div>
 
-              </div>
-              <div class="col mt-4 text-center">
-                <input class="btn-submit" type="submit" value="Registrar">
-              </div>
-            </form>
-          </div>
-          <div class="col"></div>
+            </div>
+            <div class="col mt-4 text-center">
+              <input class="btn-submit" type="submit" value="Registrar">
+            </div>
+          </form>
         </div>
-
-  
+        <div class="col"></div>
+      </div>
     </div>
     <div class="col"></div>
   </div>
   <!--cierre Formulario para usuarios -->
 
 
-
-
-<!-- Formulario para usuarios  -->
-
-<!-- cierre Formulario para propietarios  -->
+  <!-- Formulario para propietarios  -->
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-md-10 col-lg-10 form-register-property">
+      <div class="card rounded-pill mt-3  bg-transparent">
+        <div class="row">
+          <div class="col title-signin">
+            <h2 id="title-sign">Registro de Propietarios</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col"></div>
+        <div class="col-lg-10 form-signin mt-2">
+          <form id="form-register-property" method="POST" action="/onwer" enctype="multipart/form-data"
+            onsubmit="return validateFieldsPrio();">
+            <div class="row">
+              <div class="col">
+                <label for="">Nombre:</label>
+                <input type="text" class="form-control mt-1" name="name" id="namePrio" placeholder="Ingresa tu nombre">
+              </div>
+              <div class="col">
+                <label for="">Documento:</label>
+                <input type="text" class="form-control mt-1" name="identification" id="identificationPrio"
+                  placeholder="Ingresa tu documento">
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <label for="">Ciudad:</label>
+                <input type="text" class="form-control mt-1" name="city" id="cityPrio"
+                  placeholder="Ingresa la ciudad donde vives">
+              </div>
+              <div class="col">
+                <label for="">Pais:</label>
+                <input type="text" class="form-control mt-1" name="country" id="countryPrio"
+                  placeholder="Ingresa el Pais donde vives">
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <label for="">Imagen de perfil:</label>
+                <input type="file" class="form-control mt-1" name="avatar" id="avatarPrio"
+                  placeholder="Ingresa tu imagen de perfil">
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <label for="">Correo:</label>
+                <input type="text" class="form-control mt-1" name="email" id="emailPrio"
+                  placeholder="Ingresa tu correo">
+                <a id="go-user-register" class="float-start link-form"><span>¿Eres Usuario?</span></a>
+              </div>
+              <div class="col">
+                <label for="">Contraseña:</label>
+                <input type="password" class="form-control mt-1" name="password" id="passwordPrio"
+                  placeholder="Ingresa una contraseña">
+                <a class="float-end link-form" href="/signin"><span>Iniciar Sesión</span></a>
+              </div>
+            </div>
+            <div class="col mt-4 text-center">
+              <input class="btn-submit" type="submit" value="Registrar">
+            </div>
+          </form>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+  <!-- cierre Formulario para propietarios  -->
 </div>
+<!-- Fin del container -->
 {% endblock %}
