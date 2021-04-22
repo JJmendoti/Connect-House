@@ -66,12 +66,11 @@ window.addEventListener("load", function () {
 let btnTop = document.getElementById("back-to-top").value;
 
 window.onscroll = function() {backtop()};
-
 function backtop() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    btnTop.style.display = "block";
-  } else {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     btnTop.style.display = "none";
+  } else {
+    btnTop.style.display = "block";
   }
 }
 
