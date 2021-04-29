@@ -5,9 +5,9 @@ import os
 from werkzeug.utils import secure_filename
 
 #se crea copnexion a base datos
-myClient = pymongo.MongoClient("mongodb://localhost:27017")
+myClient = pymongo.MongoClient("mongodb://admin-rentapp:rentapp12345@rentapp-shard-00-00.iqoc1.mongodb.net:27017,rentapp-shard-00-01.iqoc1.mongodb.net:27017,rentapp-shard-00-02.iqoc1.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-viqn5b-shard-0&authSource=admin&retryWrites=true&w=majority")
 #se crea base de datos
-myDB = myClient["rentApp"]
+myDB = myClient["rentApp-deskop"]
 #se crean colecciones
 apartmentsCollection = myDB["apartments"]
 onwerCollection = myDB["onwer"]
