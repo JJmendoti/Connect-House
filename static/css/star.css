@@ -103,3 +103,6 @@
   iframe {
     border-radius: 5px;
   }
+  .row-login {
+    min-height: 90vh;
+  }

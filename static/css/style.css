@@ -234,7 +234,9 @@ body {
   box-shadow: 2px 1px 12px #000000;
   color: white;
 }
-
+.data-onwer {
+  min-height: 85vh;
+}
 .alert {
   margin-bottom: 0 !important;
 }
