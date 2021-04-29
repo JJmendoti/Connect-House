@@ -21,7 +21,7 @@ Actualizar apartamento
             <div class="row">
                 <div class="row">
                     <div class="col title-signin">
-                        <h2 id="title-sign">Actualizar Inmueble</h2>
+                        <h2 id="title-sign" class="mt-2">Actualizar Inmueble</h2>
                     </div>
                 </div>
                 <div class="col-lg-2 col-lg-offset-2">
@@ -35,12 +35,12 @@ Actualizar apartamento
                         <div class="row">
                             <div class="col">
                                 <label for="">Titulo de la Propiedad:</label>
-                                <input type="text" class="form-control mt-1" id="title" name="title"
+                                <input type="text" class="form-control mt-1" id="title" name="title" value="{{data['name']}}"
                                     placeholder="Ingresa el titulo de la Propiedad">
                             </div>
                             <div class="col">
                                 <label for="">Ciudad:</label>
-                                <input type="text" class="form-control mt-1" id="city" name="city"
+                                <input type="text" class="form-control mt-1" id="city" name="city" value="{{data['city']}}"
                                     placeholder="Ingresa la ciudad">
                             </div>
                         </div>
@@ -48,12 +48,12 @@ Actualizar apartamento
 
                             <div class="col">
                                 <label for="">Pais:</label>
-                                <input type="text" class="form-control mt-1" id="country" name="country"
+                                <input type="text" class="form-control mt-1" id="country" name="country" value="{{data['country']}}"
                                     placeholder="Ingresa el pais">
                             </div>
                             <div class="col">
                                 <label for="">Dirección:</label>
-                                <input type="text" class="form-control mt-1" id="direction" name="address"
+                                <input type="text" class="form-control mt-1" id="direction" name="address" value="{{data['address']}}"
                                     placeholder="Ingresa la dirección">
                             </div>
                         </div>
@@ -61,24 +61,24 @@ Actualizar apartamento
 
                             <div class="col">
                                 <label for="">Imagenes:</label>
-                                <input type="file" class="form-control mt-1" id="images" name="images[]" multiple=""
+                                <input type="file" class="form-control mt-1" id="images" name="images[]" multiple="" value="{{data['image']}}"
                                     placeholder="Ingresa imagenes de tu inmueble">
                             </div>
                             <div class="col">
                                 <label for="">Imagen Destacada:</label>
-                                <input type="file" class="form-control mt-1" id="outstandingImage"
+                                <input type="file" class="form-control mt-1" id="outstandingImage" value="{{data['image_featured']}}"
                                     name="outstandingImage" placeholder="Ingresa la imagen destacada">
                             </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col">
                                 <label for="">Ubicación en Google Maps:</label>
-                                <input type="text" class="form-control mt-1" id="location" name="location"
+                                <input type="text" class="form-control mt-1" id="location" name="location" value="{{data['location']}}"
                                     placeholder="Ingresa el enlace de la ubicación">
                             </div>
                             <div class="col">
                                 <label for="">Valor Noche:</label>
-                                <input type="text" class="form-control mt-1" id="nightValue" name="nightValue"
+                                <input type="text" class="form-control mt-1" id="nightValue" name="nightValue" value="{{data['nigth_value']}}"
                                     placeholder="Ingresa el valor de la noche">
                             </div>
 
@@ -86,10 +86,12 @@ Actualizar apartamento
                         <div class="row mt-4">
                             <div class="col">
                                 <label for="">Reseña del Inmueble:</label>
-                                <textarea class="form-control mt-1" id="review" name="review"
-                                    placeholder="Ingresa una reseña de tu inmueble"></textarea>
+                                <textarea class="form-control mt-1" id="review" name="review" 
+                                    placeholder="Ingresa una reseña de tu inmueble">{{data['review']}}</textarea>
                             </div>
                             <input type="text" class="d-none" name="idonwer" value="{{session['user']}}">
+                            <input type="text" name="id" id="id" value="{{data['_id']}}" class="d-none">
+                            <input type="text" name="assessment" id="assessment" value="{{data['assessment']}}" class="d-none">
                         </div>
                         <div class="col mt-4 text-center">
                             <input class="btn-submit" type="submit" value="Guardar Inmueble">

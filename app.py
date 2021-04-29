@@ -299,14 +299,14 @@ def send_apartment():
     else:
        return render_template("addapartament.html", status = "E")
 
-@app.route('/apartment-update/', methods=['POST'])
+@app.route('/apartment-update', methods=['POST'])
 def up_apartment():
     ide = request.form.get('id')
     query = {"_id": ObjectId(ide)}
     name = request.form.get('title')
     idonwer = request.form.get('idonwer')
     location = request.form.get('location')
-    assessment = 1
+    assessment = request.form.get('assessment')
     country = request.form.get('country')
     city = request.form.get('city')
     address = request.form.get('address')
@@ -320,12 +320,12 @@ def up_apartment():
     image_featured.save(os.path.join(app.config['UPLOAD_FOLDER'], image_featured_name))
     nigth_value = request.form.get('nightValue')
     review = request.form.get('review')
-    apartment = {"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
+    apartment = {"$set":{"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}}
     save = apartmentsCollection.update_one(query,apartment)
     if save:
-        return render_template("addapartament.html", status = True)
+        return redirect(url_for("homeonwer"))
     else:
-       return render_template("addapartament.html", status = False)
+       return redirect(url_for("index"))
 
 
 @app.route('/signinuser', methods=['POST'])
