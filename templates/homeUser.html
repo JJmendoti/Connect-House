@@ -9,23 +9,79 @@ Perfil de Usuario
         <div class="col-lg-2 data-user">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <img class="rounded-circle user-img mt-5" src="{{url_for('static', filename='img/uploads/'+data['avatar'])}}" alt="">
+                    <img class="rounded-circle user-img mt-5"
+                        src="{{url_for('static', filename='img/uploads/'+data['avatar'])}}" alt="">
                     <h6 class="title-user mt-2">{{data['name']}}</h6>
                     <ul class="list-group mt-4">
-                        <li class="list-group-item"><i class="fas fa-id-card me-2"> Identificación:</i><br>{{data['ident']}}</li>
-                        <li class="list-group-item"><i class="fas fa-envelope me-2"> Email:</i><br>{{data['email']}}</li>
-                        <li class="list-group-item"><i class="fas fa-globe-americas me-2"> Pais:</i><br>{{data['country']}}</li>
-                        <li class="list-group-item"><i class="fas fa-building me-2"> Ciudad:</i><br>{{data['city']}}</li>
-                      </ul>
+                        <li class="list-group-item"><i class="fas fa-id-card me-2">
+                                Identificación:</i><br>{{data['ident']}}</li>
+                        <li class="list-group-item"><i class="fas fa-envelope me-2"> Email:</i><br>{{data['email']}}
+                        </li>
+                        <li class="list-group-item"><i class="fas fa-globe-americas me-2">
+                                Pais:</i><br>{{data['country']}}</li>
+                        <li class="list-group-item"><i class="fas fa-building me-2"> Ciudad:</i><br>{{data['city']}}
+                        </li>
+                    </ul>
 
-                      <a href="/signout"><button class="btn btn-dark mt-5">Cerrar Sesión</button></a>
+                    <a href="/signout"><button class="btn btn-light mt-5 mb-5">Cerrar Sesión</button></a>
                 </div>
             </div>
         </div>
-            
-        <div class="col-lg-10 apartments">
 
+        <div class="col-lg-10 apartments">
+            <div class="row">
+                <div class="container mb-2 pb-3">
+                    <h2 class="mt-4">Descubre Colombia </h2>
+                    <strong class="text-center text-lg-left mt-4 mb-0">
+                        <p class="text-dark">Estos destinos populares tienen mucho que ofrecer</p>
+                    </strong>
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
+                        <div class="col">
+                            <div class="card">
+                                <img src="/static/img/discover/cartagena.jpg" class="card-img-top" width="200"
+                                    height="180" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Cartagena de Indias</h5>
+                                    <p class="card-text text-muted text-center text-dark">2.088 Alojamientos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="/static/img/discover/villa.jpg" class="card-img-top" width="200" height="180"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Villa de Leyva</h5>
+                                    <p class="card-text text-muted text-center text-dark">376 Alojamientos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="/static/img/discover/guatape.jpg" class="card-img-top" width="200"
+                                    height="180" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Guatapé</h5>
+                                    <p class="card-text text-muted text-center text-dark">182 Alojamientos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card bg-dark text-white">
+                    <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                      <h5 class="card-title text-dark">Card title</h5>
+                      <p class="card-text text-dark">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                  </div>
+            </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
