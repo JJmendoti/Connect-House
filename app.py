@@ -62,9 +62,11 @@ def err():
 def discover():
     return render_template('discover.html')
 
-@app.route('/update')
-def update():
-    return render_template('updateApartment.html')
+@app.route('/update-apartment/<id>')
+def update(id):
+    query = {"_id":ObjectId(id)}
+    result = apartmentsCollection.find_one(query)
+    return render_template('updateApartment.html', data = result)
 
 
 
@@ -297,9 +299,10 @@ def send_apartment():
     else:
        return render_template("addapartament.html", status = "E")
 
-@app.route('/apartment/<id>', methods=['PUT'])
-def up_apartment(id):
-    query = {"_id": ObjectId(id)}
+@app.route('/apartment-update/', methods=['POST'])
+def up_apartment():
+    ide = request.form.get('id')
+    query = {"_id": ObjectId(ide)}
     name = request.form.get('title')
     idonwer = request.form.get('idonwer')
     location = request.form.get('location')
