@@ -48,6 +48,13 @@ def homeonwer():
         apartment_result = apartmentsCollection.find({"idonwer": session['user']})
         return render_template('homeOnwer.html', data = result, apartments = apartment_result)
 
+@app.route('/updateonwer')
+def updateonwerview():
+    if session['user']:
+        query = {"_id": ObjectId(session['user'])}
+        result = onwerCollection.find_one(query)
+        return render_template('updateonwer.html', data = result)
+
 @app.route('/signout')
 def signout():
     session.clear()

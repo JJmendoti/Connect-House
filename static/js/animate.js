@@ -3,6 +3,13 @@ $(document).ready(function(){
     if($("#alerta").hasClass("d-block")){
      alert("holi")
     }
+
+    $('#fedit').mouseenter(function(){
+        $('#span-edit').show();
+    });
+    $('#fedit').mouseleave(function(){
+        $('#span-edit').hide();
+    });
  });
 
 
