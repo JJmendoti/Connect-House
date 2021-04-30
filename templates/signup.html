@@ -15,21 +15,14 @@ Sign Up
 {% else %}
 <div></div>
 {% endif %}
-<div class="container-fluid signin page-sign">
+<div class="container  page-register">
   <!-- Formulario para usuarios -->
-  <div class="row">
-    <div class="col"></div>
-    <div class="col-md-10 col-lg-10  form-register-user">
-      <div class="card rounded-pill mt-3  bg-transparent">
-        <div class="row">
-          <div class="col title-signin">
-            <h2 id="title-sign">Registro de usuarios</h2>
-          </div>
-        </div>
-      </div>
+  <div class="row form-register-user-new">
+    <div class="col-6 title-signin-new">
+    </div>
+    <div class="col-md-10 col-lg-6  ">
       <div class="row mb-3">
-        <div class="col"></div>
-        <div class="col-lg-10 form-signin mt-2">
+        <div class="col-lg-12 form-signin-new mt-2">
           <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data" action=""
             onsubmit="return validateFields();">
             <div class="row">
@@ -82,10 +75,8 @@ Sign Up
             </div>
           </form>
         </div>
-        <div class="col"></div>
       </div>
     </div>
-    <div class="col"></div>
   </div>
   <!--cierre Formulario para usuarios -->
 

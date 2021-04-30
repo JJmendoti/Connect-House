@@ -126,3 +126,20 @@
     color:white;
     text-decoration: none;
   }
+
+  .form-register-user-new {
+      margin-top: 20px;
+      background-color: white;
+      padding: 30px;
+  }
+
+  .form-signin-new {
+
+  }
+
+  .page-register {
+    min-height: 90vh;
+  }
+
+  .title-signin-new{
+  }
