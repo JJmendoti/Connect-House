@@ -35,8 +35,8 @@ Perfil de Usuario
         </div>
 
         <div class="col-lg-10 apartments">
+            <div class="container mb-2 pb-3">
             <div class="row">
-                <div class="container mb-2 pb-3">
                     <h2 class="mt-4">Descubre Colombia </h2>
                     <strong class="text-center text-lg-left mt-4 mb-0">
                         <p class="text-dark">Estos destinos populares tienen mucho que ofrecer</p>
@@ -73,38 +73,72 @@ Perfil de Usuario
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
-            <div class="container-pricipal">
-                <div class="container bg-link exotic">
-                    <div class="row ms-2 me-3">
-                        <div class="cardExotic">
-                            <h3>Destinos Exóticos</h3>
-                            <div class="contentExotic">
-                                <div class="left">
-                                    <img src="/static/img/exoticos/exo1.jpg" width="200" height="100" alt="">
-                                </div>
-                                <div class="right-texto">
-                                    <h4>CUEVA GRJÓTAGJÁ, ISLANDIA</h4>
-                                    <p>Una pequeña cueva de lava, parece poca cosa, pero en su interior  esconde un pequeño lago de aguas termales. Desde el siglo XVIII hasta la década de 1970, Grjótagjá era una zona de baño popular. Pero con las erupciones producidas de 1975 y 1984 la temperatura del agua subió a más de 50 °C, y aunque ahora han caído unos grados ya no es posible tomarse un baño sin escaldarse.</p>
-                                </div>
-                            </div>
-                            <div class="contentExotic">
-                                <div class="left">
-                                    <img src="/static/img/exoticos/exo2.jpg" width="200" height="100" alt="">
-                                </div>
-                                <div class="right-texto">
-                                    <h4>CGRAND PRISMATIC SPRING, YELLOWSTONE; ESTADOS UNIDOS.</h4>
-                                    <p>¿Un viaje a Estados Unidos puede ser exótico? Si es al estado de Wyoming, al Parque Nacional de Yellowstone, seguro que sí. Este famoso parque, que nos trae recuerdos de infancia con aquellos dibujos del oso Yogui, es un verdadero regalo de la naturaleza, una colección de maravillas en forma de cañones, formaciones rocosas, géiseres… y por supuesto sus pintorescas fuentes termales.</p>
+            <div class="row">
+                <div class="container mb-2 pb-3">
+                    <h3>Destinos Exóticos</h3>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h6><strong>CUEVA GRJÓTAGJÁ, ISLANDIA</strong></h6>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <img src="/static/img/exoticos/exo1.jpg" class="figure-img img-fluid rounded" alt="">
+                                    <p>Una pequeña cueva de lava, parece poca cosa, pero en su interior esconde un
+                                        pequeño lago de aguas termales. Desde el siglo XVIII hasta la década de 1970,
+                                        Grjótagjá era una zona de baño popular. Pero con las erupciones producidas de
+                                        1975 y 1984 la temperatura del agua subió a más de 50 °C, y aunque ahora han
+                                        caído unos grados ya no es posible tomarse un baño sin escaldarse.</p>
                                 </div>
                             </div>
-                            
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h6> <strong>CGRAND PRISMATIC SPRING, YELLOWSTONE; ESTADOS UNIDOS.</strong> </h6>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <img src="/static/img/exoticos/exo2.jpg" class="figure-img img-fluid rounded" alt="...">
+                                    <p>¿Un viaje a Estados Unidos puede ser exótico? Si es al estado de Wyoming, al
+                                        Parque Nacional de Yellowstone, seguro que sí. Este famoso parque, que nos trae
+                                        recuerdos de infancia con aquellos dibujos del oso Yogui, es un verdadero regalo
+                                        de la naturaleza, una colección de maravillas en forma de cañones, formaciones
+                                        rocosas, géiseres… y por supuesto sus pintorescas fuentes termales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h6><strong>ISLAS SAN BLAS – PANAMA</strong></h6>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <img src="/static/img/exoticos/exo3.jpg" class="figure-img img-fluid rounded" alt="...">
+                                    <p>Las Islas de San Blas son un auténtico paraíso virgen que nada tiene que ver con los masificados destinos caribeños para grandes multitudes, para empezar porque llegar hasta allí no es fácil, lo mejor es en avioneta, una de esas que convierten el viaje en una aventura, de las que aterrizan en una isla que desde el cielo no parece mayor que una moneda de 2 €. También se puede ir en velero, lo que permite ir de isla en isla descubriendo los distintos estilos de vida, sus fondos marinos y sus solitarias playas, lo que siempre soñaste del Caribe, eso es San Blas.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
+
     </div>
 </div>
 
