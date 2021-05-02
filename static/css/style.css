@@ -9,6 +9,7 @@ body {
   background-image: linear-gradient(to top, #cecfcf 0%, #f2f7fd 100%);
   align-items: center;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
@@ -54,7 +55,7 @@ body {
   position: relative;
   top: 360px;
   text-align: center;
-  font-weight: 900;
+
 }
 
 /* Estilos de 404 */
@@ -169,7 +170,7 @@ body {
 
 #title-sign {
   color: white;
-  font-family: 'Ranchers', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .title-signin {
@@ -186,7 +187,7 @@ body {
   border-radius: 15px;
   color: white;
   font-size: 20px;
-  font-family: 'Ranchers', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btn-submit:hover {
@@ -208,7 +209,7 @@ body {
 }
 
 .link-form {
-  color: white;
+  color: #010101;
   text-decoration: none;
 }
 
@@ -379,7 +380,7 @@ body {
 }
 
 .p {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: white;
   line-height: 28px;
