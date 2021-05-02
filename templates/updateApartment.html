@@ -15,22 +15,25 @@ Actualizar apartamento
 {% else %}
 <div></div>
 {% endif %}
-<div class="page-sign ">
-    <div class="row gx-0 gy-0">
-        <div class="col-lg-12 apartment">
-            <div class="row">
-                <div class="row">
-                    <div class="col title-signin">
-                        <h2 id="title-sign" class="mt-4">Actualizar Inmueble</h2>
+
+
+<div class="container page-sign  pb-1">
+    <div class="form-register-property-update">
+        <div class="row">
+            <div class="col-5 title-signin-new">
+                <img class="img-fluid" src="{{url_for('static', filename='img/updateapartment.png')}}" alt="">
+            </div>
+            <div class="col-md-7 col-lg-7 col-sm-12 ">
+                <div class="row mb-2">
+                    <div class="col align-items-center text-center">
+                        <div class="badge fw-bold text-dark  fs-3 mt-3">
+                            Actualizar Apartamento
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-lg-offset-2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-lg-6 form-signin mt-2">
-                    <form id="form-register-apartments" method="POST" action="/apartment-update" enctype="multipart/form-data"
+                <div class="row mb-3">
+                    <div class="col-lg-12 form-signin-new mt-2">
+                        <form id="form-register-apartments" method="POST" action="/apartment-update" enctype="multipart/form-data"
                         onsubmit="return validateAddApartment();">
                         <div class="row">
                             <div class="col">
@@ -97,10 +100,19 @@ Actualizar apartamento
                             <input class="btn-submit" type="submit" value="Guardar Inmueble">
                         </div>
                     </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center mt-5 text-user-sign">
+                        </div>
+                    </div>
                 </div>
-                <div class="col"></div>
-            </div>
+            </div>           
         </div>
     </div>
+    <!-- cierre Formulario para apartamentos  -->
+
 </div>
+
+
+
 {% endblock %}

@@ -154,6 +154,13 @@
       display: none;
       margin-bottom: 30px;
   }
+  .form-register-property-update {
+      margin-top: 20px;
+      background-color: white;
+      padding: 30px;
+      margin-bottom: 30px;
+  }
+
 
   .active-btn {
     background-color: rgb(233, 218, 8);

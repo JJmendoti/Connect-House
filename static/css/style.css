@@ -155,12 +155,7 @@ body {
   background-size: 100% 100%;
 }
 
-.apartment {
-  min-height: 85vh;
-  background-image: url('/static/img/apartment.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+
 
 
 

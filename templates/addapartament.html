@@ -15,90 +15,99 @@ Agregar apartamento
 {% else %}
 <div></div>
 {% endif %}
-<div class="page-sign  pb-1">
-    <div class="row gx-0 gy-0">
-        <div class="col-lg-12 apartment">
+
+<div class="container page-sign  pb-1">
+        <div class="form-register-property-update">
             <div class="row">
-                <div class="row">
-                    <div class="col title-signin">
-                        <h2 id="title-sign">Agregar Inmueble</h2>
+                <div class="col-md-7 col-lg-7 col-sm-12 ">
+                    <div class="row mb-2">
+                        <div class="col align-items-center text-center">
+                            <div class="badge fw-bold text-dark  fs-3 mt-3">
+                                Agregar Apartamento
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-12 form-signin-new mt-2">
+                            <form id="form-register-apartments" method="POST" action="/apartment" enctype="multipart/form-data"
+                            onsubmit="return validateAddApartment();">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">Titulo de la Propiedad:</label>
+                                    <input type="text" class="form-control mt-1" id="title" name="title"
+                                        placeholder="Ingresa el titulo de la Propiedad">
+                                </div>
+                                <div class="col">
+                                    <label for="">Ciudad:</label>
+                                    <input type="text" class="form-control mt-1" id="city" name="city"
+                                        placeholder="Ingresa la ciudad">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+    
+                                <div class="col">
+                                    <label for="">Pais:</label>
+                                    <input type="text" class="form-control mt-1" id="country" name="country"
+                                        placeholder="Ingresa el pais">
+                                </div>
+                                <div class="col">
+                                    <label for="">Dirección:</label>
+                                    <input type="text" class="form-control mt-1" id="direction" name="address"
+                                        placeholder="Ingresa la dirección">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+    
+                                <div class="col">
+                                    <label for="">Imagenes:</label>
+                                    <input type="file" class="form-control mt-1" id="images" name="images[]" multiple=""
+                                        placeholder="Ingresa imagenes de tu inmueble">
+                                </div>
+                                <div class="col">
+                                    <label for="">Imagen Destacada:</label>
+                                    <input type="file" class="form-control mt-1" id="outstandingImage"
+                                        name="outstandingImage" placeholder="Ingresa la imagen destacada">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="">Ubicación en Google Maps:</label>
+                                    <input type="text" class="form-control mt-1" id="location" name="location"
+                                        placeholder="Ingresa el enlace de la ubicación">
+                                </div>
+                                <div class="col">
+                                    <label for="">Valor Noche:</label>
+                                    <input type="text" class="form-control mt-1" id="nightValue" name="nightValue"
+                                        placeholder="Ingresa el valor de la noche">
+                                </div>
+    
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="">Reseña del Inmueble:</label>
+                                    <textarea class="form-control mt-1" id="review" name="review"
+                                        placeholder="Ingresa una reseña de tu inmueble"></textarea>
+                                </div>
+                                <input type="text" class="d-none" name="idonwer" value="{{session['user']}}">
+                            </div>
+                            <div class="col mt-4 text-center">
+                                <input class="btn-submit" type="submit" value="Guardar Inmueble">
+                            </div>
+                        </form>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center mt-5 text-user-sign">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-lg-offset-2">
+                <div class="col-5 title-signin-new">
+                    <img class="img-fluid" src="{{url_for('static', filename='img/apartment.png')}}" alt="">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-lg-10 form-signin mt-2">
-                    <form id="form-register-apartments" method="POST" action="/apartment" enctype="multipart/form-data"
-                        onsubmit="return validateAddApartment();">
-                        <div class="row">
-                            <div class="col">
-                                <label for="">Titulo de la Propiedad:</label>
-                                <input type="text" class="form-control mt-1" id="title" name="title"
-                                    placeholder="Ingresa el titulo de la Propiedad">
-                            </div>
-                            <div class="col">
-                                <label for="">Ciudad:</label>
-                                <input type="text" class="form-control mt-1" id="city" name="city"
-                                    placeholder="Ingresa la ciudad">
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-
-                            <div class="col">
-                                <label for="">Pais:</label>
-                                <input type="text" class="form-control mt-1" id="country" name="country"
-                                    placeholder="Ingresa el pais">
-                            </div>
-                            <div class="col">
-                                <label for="">Dirección:</label>
-                                <input type="text" class="form-control mt-1" id="direction" name="address"
-                                    placeholder="Ingresa la dirección">
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-
-                            <div class="col">
-                                <label for="">Imagenes:</label>
-                                <input type="file" class="form-control mt-1" id="images" name="images[]" multiple=""
-                                    placeholder="Ingresa imagenes de tu inmueble">
-                            </div>
-                            <div class="col">
-                                <label for="">Imagen Destacada:</label>
-                                <input type="file" class="form-control mt-1" id="outstandingImage"
-                                    name="outstandingImage" placeholder="Ingresa la imagen destacada">
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col">
-                                <label for="">Ubicación en Google Maps:</label>
-                                <input type="text" class="form-control mt-1" id="location" name="location"
-                                    placeholder="Ingresa el enlace de la ubicación">
-                            </div>
-                            <div class="col">
-                                <label for="">Valor Noche:</label>
-                                <input type="text" class="form-control mt-1" id="nightValue" name="nightValue"
-                                    placeholder="Ingresa el valor de la noche">
-                            </div>
-
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col">
-                                <label for="">Reseña del Inmueble:</label>
-                                <textarea class="form-control mt-1" id="review" name="review"
-                                    placeholder="Ingresa una reseña de tu inmueble"></textarea>
-                            </div>
-                            <input type="text" class="d-none" name="idonwer" value="{{session['user']}}">
-                        </div>
-                        <div class="col mt-4 text-center">
-                            <input class="btn-submit" type="submit" value="Guardar Inmueble">
-                        </div>
-                    </form>
-                </div>
-                <div class="col"></div>
             </div>
         </div>
-    </div>
-</div> 
+        <!-- cierre Formulario para apartamentos  -->
+
+</div>
+
 {% endblock %}

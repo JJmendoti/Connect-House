@@ -17,6 +17,8 @@
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='glide/dist/css/glide.core.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='glide/dist/css/glide.theme.min.css')}}">
   <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
   <link rel="stylesheet" href="{{url_for('static', filename='css/star.css')}}">
   <title>{% block title %} {% endblock %}</title>
@@ -313,6 +315,7 @@
   crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b2e2dac0bc.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+<script src="{{url_for('static', filename='glide/dist/glide.min.js')}}"></script>
 <script src="{{url_for('static', filename='js/forms-control.js')}}"></script>
 <script src="{{url_for('static', filename='js/forms-validation.js')}}"></script>
 <script src="{{url_for('static', filename='js/animate.js')}}"></script>

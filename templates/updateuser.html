@@ -1,0 +1,102 @@
+{% extends './layout/layout.html' %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+{% block content %}
+{% if status == "Y" %}
+<div class="alert alert-success" role="alert">
+    Registro exitoso!
+</div>
+{% elif status == "E" %}
+<div class="alert alert-danger" role="alert">
+    Error al registrar!
+</div>
+{% else %}
+<div></div>
+{% endif %}
+<div class="container  page-register">
+    <!-- Formulario para usuarios -->
+    <div class="form-register-user-new ">
+        <div class="row ">
+            <div class="col-6 title-signin-new">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-fluid" src="{{url_for('static', filename='img/sign-person.jpg')}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-16 col-lg-6 col-sm-12">
+                <div class="row mb-2">
+                    <div class="col align-items-center text-center">
+                        <div class="badge fw-bold text-dark  fs-3 mt-3">
+                            Actualizar Datos
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-12 form-signin-new mt-2">
+                        <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data"
+                            action="" onsubmit="return validateFields();">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">Nombre:</label>
+                                    <input type="text" class="form-control mt-1" name="name" id="name"
+                                        placeholder="Ingresa tu nombre">
+                                </div>
+                                <div class="col">
+                                    <label for="">Documento:</label>
+                                    <input type="text" class="form-control mt-1" name="identification"
+                                        id="identification" placeholder="Ingresa tu documento">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="">Ciudad:</label>
+                                    <input type="text" class="form-control mt-1" name="city" id="city"
+                                        placeholder="Ingresa la ciudad donde vives">
+                                </div>
+                                <div class="col">
+                                    <label for="">Pais:</label>
+                                    <input type="text" class="form-control mt-1" name="country" id="country"
+                                        placeholder="Ingresa el Pais donde vives">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="">Imagen de perfil:</label>
+                                    <input type="file" class="form-control mt-1" name="avatar" id="avatar"
+                                        placeholder="Ingresa tu imagen de perfil">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="">Correo:</label>
+                                    <input type="text" class="form-control mt-1" name="email" id="email"
+                                        placeholder="Ingresa tu correo">
+                                </div>
+                                <div class="col">
+                                    <label for="">Contraseña:</label>
+                                    <input type="password" class="form-control mt-1" name="password" id="password"
+                                        placeholder="Ingresa una contraseña">
+                                </div>
+
+                            </div>
+                            <div class="col mt-4 text-center">
+                                <input class="btn-submit" type="submit" value="Registrar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center mt-5 text-user-sign">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cierre Formulario para usuarios -->
+
+</div>
+<!-- Fin del container -->
+{% endblock %}

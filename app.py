@@ -53,7 +53,15 @@ def updateonwerview():
     if session['user']:
         query = {"_id": ObjectId(session['user'])}
         result = onwerCollection.find_one(query)
-        return render_template('updateonwer.html', data = result)
+        return render_template('updateonwer.html')
+    
+@app.route('/updateuser')
+def updateuserview():
+    if session['user']:
+        query = {"_id": ObjectId(session['user'])}
+        result = userCollection.find_one(query)
+        return render_template('updateuser.html', data = result)
+    
 
 @app.route('/signout')
 def signout():
