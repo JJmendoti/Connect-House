@@ -131,15 +131,96 @@
       margin-top: 20px;
       background-color: white;
       padding: 30px;
+      margin-bottom: 30px;
   }
 
-  .form-signin-new {
+  /* .form-signin-new {
 
-  }
+  } */
 
   .page-register {
     min-height: 90vh;
   }
 
   .title-signin-new{
+    background-color: white;
+    margin-top: 20px;
+  }
+
+  .form-register-property-new {
+      margin-top: 20px;
+      background-color: white;
+      padding: 30px;
+      display: none;
+      margin-bottom: 30px;
+  }
+
+  .active-btn {
+    background-color: rgb(233, 218, 8);
+    border-radius: 12px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+  }
+
+  .desactivate-btn {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid rgb(194, 194, 194);
+    font-size: 14px;
+  }
+
+  .sigin-btn-go {
+    background-color: rgb(109, 109, 108);
+    border-radius: 12px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+  }
+
+  .sigin-btn-go:hover {
+    color: white;
+    background-color:black;
+  }
+
+  .text-user-sign {
+    color: gray;
+  }
+
+  .coment {
+    background-color: white;
+    padding: 30px;
+  }
+
+  #form2 label {
+    font-size: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .label2 {
+    color: grey;
+  }
+  
+  .clasificacion2 {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  .label2:hover,
+  .label2:hover ~ .label2 {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ .label2 {
+    color: orange;
+  }
+
+  .cont-apartment {
+    background-color: white;
   }

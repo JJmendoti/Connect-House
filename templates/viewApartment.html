@@ -152,17 +152,50 @@ Lista de Apartamentos
                 <p class="lh-1"> Todas las habitaciones tienen TV y aire acondicionado</p>
               </div>
             </div>
+            <div class="row mt-1">
+              <div class="col-lg-12 text-center mt-2">
+                <a class="link" href="/reservation"><button class="btn btn-primary">Reserva Ahora</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row gx-0">
+      <div class="row gx-0 ">
         <div class="col-lg-12 pe-0">
           <iframe class="mt-5" src="{{data['location']}}" title="Map" width="100%" height="400" style="border:0;"
             allowfullscreen="" loading="lazy">
           </iframe>
         </div>
       </div>
-      <div class="row mt-5 gx-0">
+      <div class="row gx-0 mt-3">
+        <div class="col-lg-12 pe-0">
+          <div class="coment">
+            <h5>Califica este alojamiento</h5>
+            <form id="form2">
+              <p class="mb-0 mt-4">Calificación: </p>
+              <p class="clasificacion2 mb-0">
+                <input id="radio1" type="radio" name="estrellas" value="5">
+                <label class="label2" for="radio1">★</label>
+                <input id="radio2" type="radio" name="estrellas" value="4">
+                <label class="label2" for="radio2">★</label>
+                <input id="radio3" type="radio" name="estrellas" value="3">
+                <label class="label2" for="radio3">★</label>
+                <input id="radio4" type="radio" name="estrellas" value="2">
+                <label class="label2" for="radio4">★</label>
+                <input id="radio5" type="radio" name="estrellas" value="1">
+                <label class="label2" for="radio5">★</label>
+              </p>
+            </form>
+            <form action=""> 
+              <label for="comment">Comentario: </label><br>
+              <textarea class="form-control" name="comment"  ></textarea>
+              <input class="btn btn-primary mt-3" type="submit" value="Enviar calificación">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3 gx-0">
         <div class="col-lg-12 pe-0">
 
           <div class="container bg-light mb-3 pb-2 p-3 rounded-2">

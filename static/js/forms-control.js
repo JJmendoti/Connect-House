@@ -9,14 +9,18 @@ $(document).ready(function () {
     $(".form-property").hide();
   });
 
-  $("#go-property-register").click(function () {
-    $(".form-register-user").hide();
-    $(".form-register-property").show();
+  $(".go-property-register").click(function () {
+    $(".form-register-user-new").hide();
+    $(".form-register-property-new").show();
+    // $(".go-property-register").addClass("activate-btn");
+    // $(".go-user-register").addClass("desactivate-btn");
   });
 
-  $("#go-user-register").click(function () {
-    $(".form-register-user").show();
-    $(".form-register-property").hide();
+  $(".go-user-register").click(function () {
+    $(".form-register-user-new").show();
+    $(".form-register-property-new").hide();
+    // $(".go-property-register").addClass("desactivate-btn");
+    // $(".go-user-register").addClass("activate-btn");
   });
 });
 

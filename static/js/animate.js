@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-    if($("#alerta").hasClass("d-block")){
-     alert("holi")
-    }
-
     $('#fedit').mouseenter(function(){
         $('#span-edit').show();
     });
