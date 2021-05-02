@@ -129,10 +129,7 @@ body {
 .page-login {
   min-height: 85vh;
   padding-top: 50px;
-  background-image: url('/static/img/login.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
+
 }
 
 .game {
@@ -199,14 +196,20 @@ body {
 
 .btn-submit:hover {
   background-color: #efb71085;
+  border: solid 1px rgba(255, 255, 255,0.5);
 }
 
 .form-login {
-  background-color: rgba(92, 92, 92, 0.5);
+  background-color: #fff;
   border-radius: 10px;
   padding: 50px;
-  color: white;
-  margin-bottom: 30px;
+  color: #010101;
+
+}
+.container-login{
+  background-color: #fff;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .6);
+  margin: 10px;
 }
 
 .link-form {
