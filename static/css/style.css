@@ -205,7 +205,6 @@ body {
 }
 .container-login{
   background-color: #fff;
-  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .6);
   margin: 10px;
 }
 
@@ -847,19 +846,3 @@ body {
 .card-hotels img:hover {
   opacity: 1;
   transition: all .3s ease-in; }
-
-.footer-icon {
-  padding-right: 10px; }
-
-.oi-aperture {
-  padding-right: 7px; }
-
-.oi-credit-card {
-  padding-right: 7px; }
-
-.oi-star {
-  color: yellow; }
-
-.oi-plus {
-  margin-left: 10px;
-  color: #00CC00; }
