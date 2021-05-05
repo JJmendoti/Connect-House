@@ -98,6 +98,7 @@ body {
 .page-404 a:hover {
   color: #ffffff;
   background: #724305ce;
+  text-decoration: none;
 }
 
 
