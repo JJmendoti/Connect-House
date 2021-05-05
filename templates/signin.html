@@ -20,6 +20,19 @@ Ingresar
                         <img src="/static/img/Login-Person.jpg" class="img-fluid" height="100" alt="">
                     </div>
                     <div class="col-lg-6 form-user mb-5">
+                        <div class="buttons">
+                            <div class="row mb-2">
+                                <div class="col-lg-3"><a class="sigin-btn-go text-decoration-none link-form" href="/signup"><span>Registrarse</span></a>
+                                </div>
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-4"><a id="go-propery" class="link-form text-decoration-none go-property-register desactivate-btn"><span>Registro
+                                      Anfitrión</span></a>
+                                </div>
+                                <div class="col-lg-4">
+                                  <a id="" class="link-form text-decoration-none go-user-register active-btn"><span>Registro Usuario</span></a>
+                                </div>
+                              </div>
+                        </div>
                         <div class="form-login">
                             <h3>Inicio de sesión usuarios</h3>
                             <form id="form-user" class="mt-2" method="POST" action="/signinuser"
@@ -30,8 +43,6 @@ Ingresar
                                 <label class="mt-4" for="">Contraseña:</label>
                                 <input type="password" class="form-control mt-1" id="password" name="password"
                                     placeholder="Ingresa tu contraseña">
-                                <a id="go-propery" class="float-start link-form"><span>¿Eres propietario?</span></a>
-                                <a class="float-end link-form text-decoration-none" href="/signup"><span>Registrarse</span></a>
                                 <div class=" mt-5 text-center">
                                     <input class="btn-submit" type="submit" value="Iniciar sesión">
                                 </div>
@@ -45,6 +56,17 @@ Ingresar
 
                     </div>
                     <div class="col-lg-6 form-property mb-5">
+                        <div class="row mb-2">
+                            <div class="col-lg-3"><a class="sigin-btn-go text-decoration-none link-form" href="/signup"><span>Registrarse</span></a>
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4"><a  class="link-form text-decoration-none go-property-register active-btn"><span>Registro
+                                  Anfitrión</span></a>
+                            </div>
+                            <div class="col-lg-4">
+                              <a id="go-user" class="link-form text-decoration-none go-user-register desactivate-btn"><span>Registro Usuario</span></a>
+                            </div>
+                          </div>
                         <div class="form-login">
                             <h3>Inicio de sesión propietarios</h3>
                             <form id="form-property" class="mt-2" method="POST" action="/signinonwer"
@@ -55,8 +77,6 @@ Ingresar
                                 <label class="mt-4" for="">Contraseña:</label>
                                 <input type="password" class="form-control mt-1" name="passwordPrio" id="passwordPrio"
                                     placeholder="Ingresa tu contraseña">
-                                <a id="go-user" class="float-start link-form"><span>¿Eres Usuario?</span></a>
-                                <a class="float-end link-form text-decoration-none" href="/signup"><span>Registrarse</span></a>
                                 <div class=" mt-5 text-center">
                                     <input class="btn-submit" type="submit" value="Iniciar sesión">
                                 </div>
