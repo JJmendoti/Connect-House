@@ -85,7 +85,7 @@ body {
 
 .page-404 a {
   text-decoration: none;
-  background: #efb810;
+  background: #cc780a;
   color: #fff;
   padding: 12px 24px;
   display: inline-block;
@@ -96,8 +96,8 @@ body {
 }
 
 .page-404 a:hover {
-  color: #cc780a;
-  background: #86880385;
+  color: #ffffff;
+  background: #724305ce;
 }
 
 
