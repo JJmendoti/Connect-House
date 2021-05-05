@@ -817,5 +817,49 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
-
+  .contenido-jumbotron h1 h2 {
+    color: #fff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2; }
+  
   /* FIN JUMBOTRON */
+  
+.card-hotels{
+  flex: 1 150px;
+  padding: 2px 0px 2px 0px;
+  margin-top: 15px;
+  margin-right: 10px;
+  
+}
+
+
+.card-hotels {
+  flex: 1 150px;
+  padding: 2px 0px 2px 0px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 10px; }
+
+.card-hotels img {
+  opacity: .6; }
+
+.card-hotels img:hover {
+  opacity: 1;
+  transition: all .3s ease-in; }
+
+.footer-icon {
+  padding-right: 10px; }
+
+.oi-aperture {
+  padding-right: 7px; }
+
+.oi-credit-card {
+  padding-right: 7px; }
+
+.oi-star {
+  color: yellow; }
+
+.oi-plus {
+  margin-left: 10px;
+  color: #00CC00; }
