@@ -61,6 +61,15 @@ def updateuserview():
         query = {"_id": ObjectId(session['user'])}
         result = userCollection.find_one(query)
         return render_template('updateuser.html', data = result)
+
+@app.route('/reservation/<id>')
+def reservation(id):
+    if session['user']:
+        query = {"_id": ObjectId(session['user'])}
+        result = userCollection.find_one(query)
+        queryaps = {"_id": ObjectId(id)}
+        data = apartmentsCollection.find_one(queryaps)
+        return render_template('reservation.html', user=result, apartment=data)
     
 
 @app.route('/signout')
@@ -111,7 +120,7 @@ def delete_user(id):
         query = {"_id": ObjectId(id)}
         delete = userCollection.delete_one(query)
         if delete:
-            return render_template("index.html", delete = True)
+            return redirect(url_for("index"))
         else:
             return render_template("index.html", delete = False)
     except:

@@ -62,13 +62,13 @@
     background-color: white;
     border-radius: 5px;
     border: 1px solid rgb(214, 214, 214);
-    padding: 10px;
+    padding: 30px;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
   #i-cross {
-    width: 90%;
+    width: 100%;
   }
 
   .btn-view-onwer {
@@ -229,5 +229,10 @@
   }
 
   .cont-apartment {
+    background-color: white;
+  }
+
+  .container-reservation {
+    min-height: 90vh;
     background-color: white;
   }
