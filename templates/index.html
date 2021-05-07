@@ -8,12 +8,13 @@ Connect-House
 <header class="site-header inicio">
     <div class="container-fluid">
         <div class="container">
+            <form action="/search-apartment" method="POST">
             <div class="row buscador">
                 <div class="col-sm-3 col-md-3">
                     <div class="d-flex align-items-center">
                         <i class="fas fa-map-marked-alt text-danger fw-bold me-1"></i>
                         <label class="form-label text-danger fw-bold" for="ubication">Ubicación</label>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="ubication" type="text"
+                        <input class="form-control fw-bold m-1 p-2 rounded-pill" name="search" id="ubication" type="text"
                             placeholder="¿A dónde vas?" aria-label="text" p-2>
                     </div>
                 </div>
@@ -40,14 +41,15 @@ Connect-House
                         <input class="form-control fw-bold m-1 p-2 rounded-pill" id="huespedes" type="text"
                             placeholder="¿Cuántos?" aria-label="Search">
                         <div class="d-flex  align-items-center">
-                            <a class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2"
+                            <button class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2"
                                 type="submit">
                                 <i class="fas fa-search"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </form>
         </div>
         <div class="contenido-header">
             <h2>¡Los anfitriones lo hacen posible!</h2>

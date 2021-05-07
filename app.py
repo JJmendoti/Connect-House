@@ -272,6 +272,18 @@ def apartment_by_id(id):
         else: 
             return render_template("404.html")
 
+@app.route('/search-apartment',methods=['POST'])
+def searchapartment():
+        search = request.form.get('search')
+        search = search.lower()
+        search = search.lstrip()
+        search = search.rstrip().capitalize()
+        query = {"city": search}
+        result = apartmentsCollection.find(query)
+        if result:
+            return render_template("filterapartment.html", data = result)
+        else: 
+            return render_template("404.html")
 # @app.route('/apartment/onwer/<id>',methods=['GET'])
 # def apartment_user_by_id(id):
 #         query = {"_id": ObjectId(id)}

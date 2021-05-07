@@ -154,7 +154,12 @@ Lista de Apartamentos
             </div>
             <div class="row mt-1">
               <div class="col-lg-12 text-center mt-2">
+                {% if "user" in session and session['type'] == "user" %}
                 <a class="link" href="/reservation/{{data['_id']}}"><button class="btn btn-primary">Reserva Ahora</button></a>
+                {% else %}
+                <p class="mb-1">Inicia sesión para reserevar</p>
+                <a class="link" href="/signin"><button class="btn btn-primary">Iniciar Sesión</button></a>
+                {% endif %}
               </div>
             </div>
           </div>
