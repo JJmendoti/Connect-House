@@ -889,7 +889,7 @@ body {
     border-radius: 10px;
   }
   
-  .back {
+  .back-card {
     overflow: hidden;
     z-index: -1;
     display: block;
@@ -897,14 +897,16 @@ body {
     transform: rotateY(180deg);
     box-sizing: border-box;
   }
-  .back:before {
+  .back-card:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
     background-size: 100% 100%;
-    background: url(/static/img/discover/W3tra4F.gif);
+    background: url(/static/img/discover/dis2.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
@@ -912,17 +914,19 @@ body {
     transform: rotateY(180deg);
   }
   
-  .front, .back {
-    transition: all 0.5s linear;
+  .front, .back-card {
+    transition: all 0.3s linear;
   }
   
   .front {
-    background-image: url(/static/img/discover/W3tra4F.gif);
+    background-image: url(/static/img/discover/dis3.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
     z-index: 1;
     box-shadow: 5px 5px 5px #aaa;
   }
   
-  .back {
+  .back-card {
     box-shadow: 0 0 0 #aaa;
   }
   
@@ -933,7 +937,7 @@ body {
   .flipped .front, .hover-card:hover .front {
     box-shadow: 0 0 0 #aaa;
   }
-  .flipped .back, .hover-card:hover .back {
+  .flipped .back-card, .hover-card:hover .back-card {
     box-shadow: 5px 5px 5px #aaa;
   }
   
@@ -981,33 +985,33 @@ body {
     color: whitesmoke;
   }
   
-  .back h2 {
+  .back-card h2 {
     margin: 0;
     border-radius: 10px 10px 0 0;
     padding: 10px;
     text-align: center;
-    color: whitesmoke;
+    color: #131212;
   }
-  .back ul {
+  .back-card ul {
     text-align: center;
     list-style: none;
     padding: 10px;
     margin: 0;
   }
-  .back ul li {
+  .back-card ul li {
     margin-top: 15px;
-    color: whitesmoke;
+    color: #131212;
   }
-  .back .botprice {
+  .back-card .botprice {
     position: absolute;
     bottom: 30px;
     border-radius: 0 0 10px 10px;
     text-align: center;
     width: 100%;
     padding: 15px;
-    color: whitesmoke;
+    color: #131212;
   }
-  .back .botprice h3 {
+  .back-card .botprice h3 {
     margin: 0px;
   }
   
@@ -1016,7 +1020,7 @@ body {
     width: 100%;
     background-color: transparent;
     border: none;
-    color: gray;
+    color: #808080;
     cursor: pointer;
     padding: 5px;
     bottom: 0;
