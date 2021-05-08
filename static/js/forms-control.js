@@ -67,19 +67,17 @@ window.addEventListener("load", function () {
 
 
 // BOTON GO TO TOP
-let btnTop = document.getElementById("back-to-top").value;
+// let btnTop = document.getElementById("back-to-top").value;
 
-window.onscroll = function() {backtop()};
-function backtop() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    btnTop.style.display = "none";
-  } else {
-    btnTop.style.display = "block";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+// window.onscroll = function() {backtop()};
+// function backtop() {
+//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//     btnTop.style.display = "block";
+//   } else {
+//     btnTop.style.display = "none";
+//   }
+// }
+// function backToTop() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
