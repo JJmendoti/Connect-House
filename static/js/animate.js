@@ -6,6 +6,16 @@ $(document).ready(function () {
     $('#fedit').mouseleave(function () {
         $('#span-edit').hide();
     });
+
+
+    new Lightpick ({ 
+        inline: true,
+        field : document . getElementById ( 'myDatepicker' ), 
+        secondField: document . getElementById ( 'myDatepicker2' ), 
+        singleDate: false,
+        onSelect : function ( date ) { 
+            
+        } });
 });
 
 

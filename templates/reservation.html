@@ -16,7 +16,118 @@ Reservación
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-lg-6 p-5 mt-5">
+                    <div class="col-lg-8 p-4">
+                        <div class="res p-4">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h5 class="mb-3">Tu Reservación</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="img-fluid-res"
+                                            src="{{url_for('static', filename='img/uploads/'+apartment['image_featured'])}}" />
+                                            <h5 class="mb-0 mt-2">
+                                                {{apartment['name']}}
+                                            </h5>
+                                            <p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{apartment['country']}} -
+                                                {{apartment['city']}}</p>
+                                            <p class="mb-0"><i class="fas fa-map-marked-alt"></i> {{apartment['address']}}</p>
+                                            <form id="form">
+                                                <p class="mb-0"><strong>Calificación:</strong> </p>
+                                                <p class="clasificacion">
+                                                  {% if apartment['assessment'] == 5 %}
+                                                  <input id="radio1" type="radio" name="estrellas" value="5" checked>
+                                                  <label class="label" for="radio1">★</label>
+                                                  <input id="radio2" type="radio" name="estrellas" value="4">
+                                                  <label class="label" for="radio2">★</label>
+                                                  <input id="radio3" type="radio" name="estrellas" value="3">
+                                                  <label class="label" for="radio3">★</label>
+                                                  <input id="radio4" type="radio" name="estrellas" value="2">
+                                                  <label class="label" for="radio4">★</label>
+                                                  <input id="radio5" type="radio" name="estrellas" value="1">
+                                                  <label class="label" for="radio5">★</label>
+                                                  {% elif apartment['assessment'] == 4 %}
+                                                  <input id="radio1" type="radio" name="estrellas" value="5">
+                                                  <label class="label" for="radio1">★</label>
+                                                  <input id="radio2" type="radio" name="estrellas" value="4" checked>
+                                                  <label class="label" for="radio2">★</label>
+                                                  <input id="radio3" type="radio" name="estrellas" value="3">
+                                                  <label class="label" for="radio3">★</label>
+                                                  <input id="radio4" type="radio" name="estrellas" value="2">
+                                                  <label class="label" for="radio4">★</label>
+                                                  <input id="radio5" type="radio" name="estrellas" value="1">
+                                                  <label class="label" for="radio5">★</label>
+                                                  {% elif apartment['assessment'] == 3 %}
+                                                  <input id="radio1" type="radio" name="estrellas" value="5">
+                                                  <label class="label" for="radio1">★</label>
+                                                  <input id="radio2" type="radio" name="estrellas" value="4">
+                                                  <label class="label" for="radio2">★</label>
+                                                  <input id="radio3" type="radio" name="estrellas" value="3" checked>
+                                                  <label class="label" for="radio3">★</label>
+                                                  <input id="radio4" type="radio" name="estrellas" value="2">
+                                                  <label class="label" for="radio4">★</label>
+                                                  <input id="radio5" type="radio" name="estrellas" value="1">
+                                                  <label class="label" for="radio5">★</label>
+                                                  {% elif apartment['assessment'] == 2 %}
+                                                  <input id="radio1" type="radio" name="estrellas" value="5">
+                                                  <label class="label" for="radio1">★</label>
+                                                  <input id="radio2" type="radio" name="estrellas" value="4">
+                                                  <label class="label" for="radio2">★</label>
+                                                  <input id="radio3" type="radio" name="estrellas" value="3">
+                                                  <label class="label" for="radio3">★</label>
+                                                  <input id="radio4" type="radio" name="estrellas" value="2" checked>
+                                                  <label class="label" for="radio4">★</label>
+                                                  <input id="radio5" type="radio" name="estrellas" value="1">
+                                                  <label class="label" for="radio5">★</label>
+                                                  {% elif apartment['assessment'] == 1 %}
+                                                  <input id="radio1" type="radio" name="estrellas" value="5">
+                                                  <label class="label" for="radio1">★</label>
+                                                  <input id="radio2" type="radio" name="estrellas" value="4">
+                                                  <label class="label" for="radio2">★</label>
+                                                  <input id="radio3" type="radio" name="estrellas" value="3">
+                                                  <label class="label" for="radio3">★</label>
+                                                  <input id="radio4" type="radio" name="estrellas" value="2">
+                                                  <label class="label" for="radio4">★</label>
+                                                  <input id="radio5" type="radio" name="estrellas" value="1" checked>
+                                                  <label class="label" for="radio5">★</label>
+                                                  {% endif %}
+                                                </p>
+                                              </form>
+                                              {% if apartment['assessment'] > 3 %}
+                                              <p class="mt-2"><span class="res-etiq">
+                                                  Hotel con altos estandares de calidad
+                                              </span></p>
+                                              {% else %}
+                                                <p class="mt-2"><span class="res-etiq-neg">
+                                                    El hotel aún no cuenta con validaciones suficientes
+                                                </span></p>
+                                              {% endif %}
+
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <form action="">
+                                                <input class="d-none" type = "text" id = "myDatepicker" name="exit" class = "form-control form-control-sm" /> 
+                                                <input class="d-none" type = "text" id = "myDatepicker2" name="return" class = "form-control form-control-sm" /> 
+    
+                                            </form>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p>Selecciona la fecha de ida y regreso</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <img class="img-payment" src="{{url_for('static', filename='img/payment.png')}}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-4">
                         <div class="row">
                             <div class="col-lg-6 ">
                                 <div class="icon-res">
@@ -32,24 +143,21 @@ Reservación
                         <div class="row mt-4">
                             <div class="col-lg-6 ">
                                 <div class="icon-res">
-                                    
+                                    <img class="icon-r img-fluid" src="../static/img/hotel.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
                                 <div class="icon-res">
-                                    
+                                    <img class="icon-r img-fluid" src="../static/img/llave.png" alt="">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h5>Tu Reservación</h5>
-                        <img class="img-view" src="{{url_for('static', filename='img/uploads/'+apartment['image_featured'])}}" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
