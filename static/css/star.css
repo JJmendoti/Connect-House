@@ -285,11 +285,42 @@
     width:17%;
   }
 
-  #salida, #regreso, #nump {
+  #salida, #regreso, #nump, .text-res {
     font-style: italic;
     font-size: 12px;
   }
 
   .lightpick {
     padding: 9px !important;
+  }
+
+  .img-apartment-desactivate {
+    filter: grayscale(1);
+  }
+
+
+  .active-ap {
+    padding: 5px;
+    background-color: rgb(0, 156, 0);
+    color: white;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .deactive {
+    padding: 5px;
+    background-color: rgb(168, 29, 24);
+    color: white;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .img-ap {
+    position: relative;
+  }
+
+  .msg-ac {
+    position: absolute;
+    top: 5%;
+    left: 7%;
   }

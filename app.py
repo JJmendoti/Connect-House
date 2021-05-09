@@ -12,6 +12,7 @@ myDB = myClient["rentApp-deskop"]
 apartmentsCollection = myDB["apartments"]
 onwerCollection = myDB["onwer"]
 userCollection = myDB["user"]
+reservationCollection = myDB["reservation"]
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/img/uploads'
@@ -315,6 +316,7 @@ def send_apartment():
     idonwer = request.form.get('idonwer')
     location = request.form.get('location')
     assessment = 1
+    active = 1
     country = request.form.get('country')
     city = request.form.get('city')
     address = request.form.get('address')
@@ -328,7 +330,7 @@ def send_apartment():
     image_featured.save(os.path.join(app.config['UPLOAD_FOLDER'], image_featured_name))
     nigth_value = request.form.get('nightValue')
     review = request.form.get('review')
-    apartment = {"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
+    apartment = {"idonwer": idonwer, "name":name, "address": address, "active": active, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
     save = apartmentsCollection.insert_one(apartment)
     if save:
         return render_template("addapartament.html", status = "Y")
@@ -344,6 +346,7 @@ def up_apartment():
     location = request.form.get('location')
     ass = request.form.get('assessment')
     assessment = int(ass)
+    active = 1
     country = request.form.get('country')
     city = request.form.get('city')
     address = request.form.get('address')
@@ -357,12 +360,56 @@ def up_apartment():
     image_featured.save(os.path.join(app.config['UPLOAD_FOLDER'], image_featured_name))
     nigth_value = request.form.get('nightValue')
     review = request.form.get('review')
-    apartment = {"$set":{"idonwer": idonwer, "name":name, "address": address, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}}
+    apartment = {"$set":{"idonwer": idonwer, "name":name, "address": address, "active": active, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}}
     save = apartmentsCollection.update_one(query,apartment)
     if save:
         return redirect(url_for("homeonwer"))
     else:
        return redirect(url_for("index"))
+
+@app.route('/active-apartment',methods=['POST'])
+def active_apartment():
+    try:  
+        id = request.form.get('id')
+        query = {"_id": ObjectId(id)}
+        data = {"$set":{"active":1}}
+        save = apartmentsCollection.update_one(query,data)
+        if save:
+            return redirect(url_for('homeonwer'))
+        else:
+            return redirect(url_for('index'))
+    except:
+        return render_template("404.html")
+
+@app.route('/deactive-apartment',methods=['POST'])
+def deactive_apartment():
+    try:  
+        id = request.form.get('id')
+        query = {"_id": ObjectId(id)}
+        data = {"$set":{"active":0}}
+        save = apartmentsCollection.update_one(query,data)
+        if save:
+            return redirect(url_for('homeonwer'))
+        else:
+            return redirect(url_for('index'))
+    except:
+        return render_template("404.html")
+
+@app.route('/reservationadd',methods=['POST'])
+def reservation_add():
+        iduser = request.form.get('iduser')
+        idapartment = request.form.get('idapartment') 
+        exi  = request.form.get('exit')
+        ret  = request.form.get('return')
+        nump  = request.form.get('numperson')
+        value = request.form.get('value')
+        query = {"iduser": iduser, "idapartment":idapartment,"exit": exi,"return": ret, "numperson":nump, "value": value}
+        data = {"$set":{"active":0}}
+        save = apartmentsCollection.insert_one(query)
+        if save:
+            return redirect(url_for('homeonwer'))
+        else:
+            return redirect(url_for('index'))
 
 
 @app.route('/signinuser', methods=['POST'])

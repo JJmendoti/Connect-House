@@ -7,9 +7,10 @@ $(document).ready(function () {
         $('#span-edit').hide();
     });
 
-
+    var dateDay = new Date().getDate();
     new Lightpick ({ 
         inline: true,
+        minDate: moment().startOf('month').add(dateDay, 'day'),
         field : document . getElementById ( 'myDatepicker' ), 
         secondField: document . getElementById ( 'myDatepicker2' ), 
         singleDate: false,
@@ -20,7 +21,12 @@ $(document).ready(function () {
 
         $( "#numPerson" ).change(function () {
             $("#nump").text($( "#numPerson option:selected" ).text());
-            
+            let nigth = $("#val_nigth").val()
+            let nump = $( "#numPerson option:selected" ).text()
+            if(parseInt(nump) > 0){
+                 let result = parseInt(nigth) * parseInt(nump);
+                 $("#value").val(result);
+            }
         });
 });
 

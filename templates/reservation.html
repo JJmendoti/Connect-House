@@ -96,6 +96,9 @@ Reservación
                                                   {% endif %}
                                                 </p>
                                               </form>
+                                              <p class="mb-0">
+                                                COP $ {{apartment['nigth_value']}}  
+                                              </p>
                                               {% if apartment['assessment'] > 3 %}
                                               <p class="mt-2"><span class="res-etiq">
                                                   Hotel con altos estandares de calidad
@@ -109,7 +112,7 @@ Reservación
                                         </div>
                                         <div class="col-lg-8">
                                             
-                                            <form action="">
+                                            <form action="/reservationadd" method="POST">
                                                 <div class="row">
                                                    <div class="col-lg-6">
                                                     <h6 class="title-res mb-4">
@@ -118,8 +121,13 @@ Reservación
                                                     <p class="mb-3"><span class="text-res">Selecciona el numero de personas y las fechas de tu viaje</span></p>
                                                     <input class="d-none" type = "text" id = "myDatepicker" name="exit" class = "form-control form-control-sm" /> 
                                                     <input class="d-none" type = "text" id = "myDatepicker2" name="return" class = "form-control form-control-sm" /> 
-                                                    <select class="form-select mb-4" id="numPerson" aria-label="Default select example">
-                                                        <option selected>Selecciona el numero de personas</option>
+                                                    <input class="d-none" type = "text" id = "value" name="value" class = "form-control form-control-sm" />
+                                                    <input class="d-none" type = "text" id = "iduser" name="iduser" value="{{user['_id']}}" class = "form-control form-control-sm" />
+                                                    <input class="d-none" type = "text" id = "idapartment" name="idapartment" value="{{apartment['_id']}}" class = "form-control form-control-sm" />
+                                                    <input class="d-none" type = "text" id = "val_nigth" name="val_nigth" value="{{apartment['nigth_value']}}" class = "form-control form-control-sm" />
+
+                                                    <select class="form-select mb-4" id="numPerson" name="numperson" aria-label="Default select example">
+                                                        <option selected value="0">Selecciona el numero de personas</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -141,7 +149,14 @@ Reservación
             
                                                         <p class="mb-2"><i class="fas fa-users"></i> <strong> Número de personas:</strong></p>
                                                         <span><p class="mt-0" id="nump"> No se ha seleccionado aún</p></span>
-                                                         
+                                                        
+                                                        <p class="lh-1 text-res mb-2">Todos nuestros paquetes incluyen seguro hotelero y transporte desde aereopuestos a lugar de destino,
+                                                            Connet House SAS no se hace responsable de comportamientos y sucesos que no esten presentes en las siguientes clausulas, al aceptar los terminos y 
+                                                            condiciones te haces responsble y adquieres un contrato el cual requiere compromisos de parte y parte.
+                                                        </p>
+
+                                                        <p class="text-res mt-4"><input type="checkbox" name="" id="">  Acepto los <a href="">Terminos y condiciones</a> y autorizo a Connet House el manejo de mis datos personales.</p>
+                                                        <button type="submit" class="btn btn-primary">Reservar</button>
                                                     </div>
                                                 
                                                 </div>

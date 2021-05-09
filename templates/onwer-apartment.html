@@ -9,7 +9,20 @@ Lista de Apartamentos
     <div class="col-lg-1">
       <a href="/homeonwer" class="back align-middle"><i class="fas fa-arrow-left"></i></a>
     </div>
-    <div class="col-lg-9"></div>
+    <div class="col-lg-8"></div>
+    <div class="col-lg-1">
+      {% if data['active']%}
+      <form action="/deactive-apartment" method="POST">
+        <input type="text" class="d-none" name="id" value="{{data['_id']}}">
+        <button type="submit" class="btn"><i class="fas fa-pause-circle"></i> Pausar</button>
+      </form>
+      {% else %}
+      <form action="/active-apartment" method="POST">
+        <input type="text" class="d-none" name="id" value="{{data['_id']}}">
+        <button type="submit" class="btn"><i class="fas fa-play-circle"></i> Activar</button>
+      </form>
+      {% endif %}
+    </div>
     <div class="col-lg-1">
       <button class="btn"><a href="/update-apartment/{{data['_id']}}" class="lin"><i class="fas fa-edit"></i> Editar</a></button>
     </div>
