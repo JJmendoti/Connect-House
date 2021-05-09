@@ -97,7 +97,7 @@ Reservación
                                                 </p>
                                               </form>
                                               <p class="mb-0">
-                                                COP $ {{apartment['nigth_value']}}  
+                                               <strong>COP $</strong> {{apartment['nigth_value']}}  
                                               </p>
                                               {% if apartment['assessment'] > 3 %}
                                               <p class="mt-2"><span class="res-etiq">
@@ -142,13 +142,16 @@ Reservación
                                                         </h6>
             
                                                         <p class="mb-0"><i class="fas fa-plane-departure"> </i> <strong> Salida:</strong></p>
-                                                        <p id="salida">No se ha seleccionado aún</p>
+                                                        <p id="salid">No se ha seleccionado aún</p>
             
                                                         <p class="mb-0"><i class="fas fa-plane-arrival"> </i> <strong> Regreso:</strong></p>
                                                         <p id="regreso">No se ha seleccionado aún</p>
             
                                                         <p class="mb-2"><i class="fas fa-users"></i> <strong> Número de personas:</strong></p>
                                                         <span><p class="mt-0" id="nump"> No se ha seleccionado aún</p></span>
+
+                                                        <p class="mb-2"><i class="fas fa-money-bill-alt"></i> <strong> Valor Total:</strong></p>
+                                                        <span><p class="mt-0" id="val"> No se ha seleccionado aún</p></span>
                                                         
                                                         <p class="lh-1 text-res mb-2">Todos nuestros paquetes incluyen seguro hotelero y transporte desde aereopuestos a lugar de destino,
                                                             Connet House SAS no se hace responsable de comportamientos y sucesos que no esten presentes en las siguientes clausulas, al aceptar los terminos y 
@@ -156,7 +159,7 @@ Reservación
                                                         </p>
 
                                                         <p class="text-res mt-4"><input type="checkbox" name="" id="">  Acepto los <a href="">Terminos y condiciones</a> y autorizo a Connet House el manejo de mis datos personales.</p>
-                                                        <button type="submit" class="btn btn-primary">Reservar</button>
+                                                        <button type="submit" class="btn btn-primary mb-5 float-end">Reservar</button>
                                                     </div>
                                                 
                                                 </div>
