@@ -13,9 +13,15 @@ $(document).ready(function () {
         field : document . getElementById ( 'myDatepicker' ), 
         secondField: document . getElementById ( 'myDatepicker2' ), 
         singleDate: false,
-        onSelect : function ( date ) { 
-            
+        onSelect : function ( start, end ) { 
+            document.getElementById("salida").innerHTML = start.format('DD MMMM YYYY');
+            document.getElementById("regreso").innerHTML = end.format('DD MMMM YYYY');
         } });
+
+        $( "#numPerson" ).change(function () {
+            $("#nump").text($( "#numPerson option:selected" ).text());
+            
+        });
 });
 
 

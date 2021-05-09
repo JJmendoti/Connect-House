@@ -284,3 +284,12 @@
   .img-payment{
     width:17%;
   }
+
+  #salida, #regreso, #nump {
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .lightpick {
+    padding: 9px !important;
+  }

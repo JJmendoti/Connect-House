@@ -9,6 +9,7 @@ Lista de Apartamentos
     <div class="page-apartment">
       <div class="row">
         {% for apartment in data %}
+        {% if apartment['active'] %}
         <div class="col-lg-6 ">
           <div class="card mt-4" style="height: 14rem;">
             <div class="row">
@@ -91,6 +92,8 @@ Lista de Apartamentos
             </div>
           </div>
         </div>
+        {% endif %}
+        
         {% endfor %}
       </div>
     </div>
