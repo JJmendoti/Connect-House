@@ -4,13 +4,13 @@
 Lista de Apartamentos
 {% endblock %}
 {% block content %}
-<div class="container">
-  <div class="row mt-4 ps-1">
-    <div class="col-lg-1">
+<div class="container ">
+  <div class="row mt-4  ps-1">
+    <div class="col-12 col-sm-12 col-md 12 col-lg-1 mb-3">
       <a href="/homeonwer" class="back align-middle"><i class="fas fa-arrow-left"></i></a>
     </div>
     <div class="col-lg-8"></div>
-    <div class="col-lg-1">
+    <div class="col-12 col-sm-12 col-md 12 col-lg-1 text-center">
       {% if data['active']%}
       <form action="/deactive-apartment" method="POST">
         <input type="text" class="d-none" name="id" value="{{data['_id']}}">
@@ -23,10 +23,10 @@ Lista de Apartamentos
       </form>
       {% endif %}
     </div>
-    <div class="col-lg-1">
+    <div class="col-12 col-sm-12 col-md 12 col-lg-1 text-center">
       <button class="btn"><a href="/update-apartment/{{data['_id']}}" class="lin"><i class="fas fa-edit"></i> Editar</a></button>
     </div>
-    <div class="col-lg-1">
+    <div class="col-12 col-sm-12 col-md 12 col-lg-1 text-center">
       <form action="/delete-apartment" method="POST">
         <input type="text" class="d-none" name="id" value="{{data['_id']}}">
         <button type="submit" class="btn"><i class="fas fa-trash-alt"></i> Eliminar</button>
@@ -36,23 +36,23 @@ Lista de Apartamentos
   </div>
   <div class="page-apartment">
     <div class="row mt-5 ">
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2">
         <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image_featured'])}}" />
       </div>
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2">
             <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][0])}}" />
           </div>
-          <div class="col-lg-6">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2">
             <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][1])}}" />
           </div>
         </div>
-        <div class="row mt-3">
-          <div class="col-lg-6">
+        <div class="row mt-1">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2">
             <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][2])}}" />
           </div>
-          <div class="col-lg-6">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2">
             <img class="img-view" src="{{url_for('static', filename='img/uploads/'+data['image'][3])}}" />
           </div>
         </div>
@@ -62,7 +62,7 @@ Lista de Apartamentos
       <div class="col-lg-12">
         <div class="segurity">
           <div class="row">
-            <div class="col-lg-1 text-center">
+            <div class="col-lg-1">
               <img id="i-cross" src="{{url_for('static', filename='img/doctor.png')}}" />
             </div>
             <div class="col-lg-11">
