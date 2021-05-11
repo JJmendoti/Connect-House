@@ -285,7 +285,7 @@
     width:17%;
   }
 
-  #salida, #regreso, #nump, .text-res {
+  #salid, #regreso, #nump, .text-res, #val {
     font-style: italic;
     font-size: 12px;
   }

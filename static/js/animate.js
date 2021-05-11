@@ -15,17 +15,18 @@ $(document).ready(function () {
         secondField: document . getElementById ( 'myDatepicker2' ), 
         singleDate: false,
         onSelect : function ( start, end ) { 
-            document.getElementById("salida").innerHTML = start.format('DD MMMM YYYY');
+            document.getElementById("salid").innerHTML = start.format('DD MMMM YYYY');
             document.getElementById("regreso").innerHTML = end.format('DD MMMM YYYY');
         } });
 
         $( "#numPerson" ).change(function () {
-            $("#nump").text($( "#numPerson option:selected" ).text());
+            $("#nump").text($( "#numPerson option:selected" ).text()+' Personas');
             let nigth = $("#val_nigth").val()
             let nump = $( "#numPerson option:selected" ).text()
             if(parseInt(nump) > 0){
                  let result = parseInt(nigth) * parseInt(nump);
                  $("#value").val(result);
+                 $("#val").text('COP $'+result);
             }
         });
 });

@@ -404,10 +404,9 @@ def reservation_add():
         nump  = request.form.get('numperson')
         value = request.form.get('value')
         query = {"iduser": iduser, "idapartment":idapartment,"exit": exi,"return": ret, "numperson":nump, "value": value}
-        data = {"$set":{"active":0}}
-        save = apartmentsCollection.insert_one(query)
+        save = reservationCollection.insert_one(query)
         if save:
-            return redirect(url_for('homeonwer'))
+            return redirect(url_for('homeuser'))
         else:
             return redirect(url_for('index'))
 
