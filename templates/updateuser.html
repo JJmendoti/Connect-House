@@ -19,9 +19,9 @@ Sign Up
     <!-- Formulario para usuarios -->
     <div class="form-register-user-new ">
         <div class="row ">
-            <div class="col-6 title-signin-new">
+            <div class="col col-sm-12 col-md-12 col-lg-6 title-signin-new">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col col-sm-12 col-md-12 col-lg-12">
                         <img class="img-fluid" src="{{url_for('static', filename='img/sign-person.jpg')}}" alt="">
                     </div>
                 </div>
@@ -35,47 +35,47 @@ Sign Up
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-lg-12 form-signin-new mt-2">
+                    <div class="col col-sm-12 col-md-12 col-lg-12 form-signin-new mt-2">
                         <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data"
                             action="" onsubmit="return validateFields();">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="">Nombre:</label>
                                     <input type="text" class="form-control mt-1" name="name" id="name"
                                         placeholder="Ingresa tu nombre">
                                 </div>
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="">Documento:</label>
                                     <input type="text" class="form-control mt-1" name="identification"
                                         id="identification" placeholder="Ingresa tu documento">
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="">Ciudad:</label>
                                     <input type="text" class="form-control mt-1" name="city" id="city"
                                         placeholder="Ingresa la ciudad donde vives">
                                 </div>
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="">Pais:</label>
                                     <input type="text" class="form-control mt-1" name="country" id="country"
                                         placeholder="Ingresa el Pais donde vives">
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="">Imagen de perfil:</label>
                                     <input type="file" class="form-control mt-1" name="avatar" id="avatar"
                                         placeholder="Ingresa tu imagen de perfil">
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="">Correo:</label>
                                     <input type="text" class="form-control mt-1" name="email" id="email"
                                         placeholder="Ingresa tu correo">
                                 </div>
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="">Contraseña:</label>
                                     <input type="password" class="form-control mt-1" name="password" id="password"
                                         placeholder="Ingresa una contraseña">
@@ -83,7 +83,7 @@ Sign Up
 
                             </div>
                             <div class="col mt-4 text-center">
-                                <input class="btn-submit" type="submit" value="Registrar">
+                                <input class="btn-submit" type="submit" value="Actualizar mis Datos">
                             </div>
                         </form>
                     </div>
