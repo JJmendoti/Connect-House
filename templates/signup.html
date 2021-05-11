@@ -15,26 +15,22 @@ Sign Up
 {% else %}
 <div></div>
 {% endif %}
-<div class="container  page-register">
+<div class="container  page-register text-center">
   <!-- Formulario para usuarios -->
   <div class="form-register-user-new ">
     <div class="row ">
-      <div class="col-6 title-signin-new">
-        <div class="row">
-          <div class="col-lg-12">
-            <img class="img-fluid" src="{{url_for('static', filename='img/sign-person.jpg')}}" alt="">
-          </div>
-        </div>
+      <div class="col-md-12 col-lg-6  title-signin-new">
+        <img class="img-fluid" src="{{url_for('static', filename='img/sign-person.jpg')}}" alt="">
       </div>
-      <div class="col-md-16 col-lg-6 col-sm-12">
+      <div class="col-sm-12 col-md-12 col-lg-6">
         <div class="row mb-2">
-          <div class="col-lg-3"><a class="sigin-btn-go text-decoration-none link-form" href="/signin"><span>Iniciar Sesión</span></a>
+          <div class="col-12 col-sm-3 col-md-3  col-lg-3 mt-4"><a class="sigin-btn-go text-decoration-none link-form" href="/signin"><span>Iniciar Sesión</span></a>
           </div>
-          <div class="col-lg-1"></div>
-          <div class="col-lg-4"><a id="" class="link-form text-decoration-none go-property-register desactivate-btn"><span>Registro
+          <div class="col"></div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 mt-4"><a id="" class="link-form text-decoration-none go-property-register desactivate-btn"><span>Registro
                 Anfitrión</span></a>
           </div>
-          <div class="col-lg-4">
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 mt-4">
             <a id="" class="link-form text-decoration-none go-user-register active-btn"><span>Registro Usuario</span></a>
           </div>
         </div>
@@ -43,43 +39,43 @@ Sign Up
             <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data" action=""
               onsubmit="return validateFields();">
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Nombre:</label>
-                  <input type="text" class="form-control mt-1" name="name" id="name" placeholder="Ingresa tu nombre">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Ingresa tu nombre">
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Documento:</label>
-                  <input type="text" class="form-control mt-1" name="identification" id="identification"
+                  <input type="text" class="form-control" name="identification" id="identification"
                     placeholder="Ingresa tu documento">
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Ciudad:</label>
-                  <input type="text" class="form-control mt-1" name="city" id="city"
+                  <input type="text" class="form-control" name="city" id="city"
                     placeholder="Ingresa la ciudad donde vives">
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Pais:</label>
-                  <input type="text" class="form-control mt-1" name="country" id="country"
+                  <input type="text" class="form-control" name="country" id="country"
                     placeholder="Ingresa el Pais donde vives">
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                   <label for="">Imagen de perfil:</label>
-                  <input type="file" class="form-control mt-1" name="avatar" id="avatar"
+                  <input type="file" class="form-control" name="avatar" id="avatar"
                     placeholder="Ingresa tu imagen de perfil">
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Correo:</label>
-                  <input type="text" class="form-control mt-1" name="email" id="email" placeholder="Ingresa tu correo">
+                  <input type="text" class="form-control" name="email" id="email" placeholder="Ingresa tu correo">
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Contraseña:</label>
-                  <input type="password" class="form-control mt-1" name="password" id="password"
+                  <input type="password" class="form-control" name="password" id="password"
                     placeholder="Ingresa una contraseña">
                 </div>
 
@@ -104,14 +100,14 @@ Sign Up
       <div class="col-6 title-signin-new">
         <img class="img-fluid" src="{{url_for('static', filename='img/sign-prop.jpg')}}" alt="">
       </div>
-      <div class="col-md-16 col-lg-6 col-sm-12 ">
+      <div class="col-md-12 col-lg-6 col-sm-12 ">
         <div class="row mb-2">
-          <div class="col-lg-3"><a class="sigin-btn-go text-decoration-none link-form" href="/signin"><span>Iniciar Sesión</span></a>
+          <div class="col-12 col-sm-3 col-md-3  col-lg-3 mt-4"><a class="sigin-btn-go text-decoration-none link-form" href="/signin"><span>Iniciar Sesión</span></a>
           </div>
-          <div class="col-lg-1"></div>
-          <div class="col-lg-4"><a id="" class="text-decoration-none link-form go-property-register active-btn"><span>Registro Anfitrión</span></a>
+          <div class="col"></div>
+          <div class="col-lg-4col-12 col-sm-4 col-md-4 col-lg-4 mt-4"><a id="" class="text-decoration-none link-form go-property-register active-btn"><span>Registro Anfitrión</span></a>
           </div>
-          <div class="col-lg-4">
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 mt-4">
             <a id="" class="text-decoration-none link-form go-user-register desactivate-btn"><span>Registro Usuario</span></a>
           </div>
         </div>
@@ -120,41 +116,41 @@ Sign Up
             <form id="form-register-user" method="POST" action="/user" enctype="multipart/form-data" action=""
               onsubmit="return validateFields();">
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Nombre:</label>
                   <input type="text" class="form-control mt-1" name="name" id="name" placeholder="Ingresa tu nombre">
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Documento:</label>
                   <input type="text" class="form-control mt-1" name="identification" id="identification"
                     placeholder="Ingresa tu documento">
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Ciudad:</label>
                   <input type="text" class="form-control mt-1" name="city" id="city"
                     placeholder="Ingresa la ciudad donde vives">
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Pais:</label>
                   <input type="text" class="form-control mt-1" name="country" id="country"
                     placeholder="Ingresa el Pais donde vives">
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                   <label for="">Imagen de perfil:</label>
                   <input type="file" class="form-control mt-1" name="avatar" id="avatar"
                     placeholder="Ingresa tu imagen de perfil">
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Correo:</label>
                   <input type="text" class="form-control mt-1" name="email" id="email" placeholder="Ingresa tu correo">
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                   <label for="">Contraseña:</label>
                   <input type="password" class="form-control mt-1" name="password" id="password"
                     placeholder="Ingresa una contraseña">
