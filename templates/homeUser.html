@@ -36,6 +36,47 @@ Perfil de Usuario
 
         <div class="col-lg-10 apartments">
             <div class="container mb-2 pb-3">
+            {% if reserva %}
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-12 mt-4 mb-3 text-center">
+                        <h4>Tus Reservaciones</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Apartamento</th>
+                                <th scope="col">País</th>
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Fecha Salida</th>
+                                <th scope="col">Fecha Regreso</th>
+                                <th scope="col">Número de personas</th>
+                                <th scope="col">Valor Pagado</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              
+                                {% for res in reserva %}
+                                <tr>
+                                    <td>{{res.name}}</td>
+                                    <td>{{res.country}}</td>
+                                    <td>{{res.city}}</td>
+                                    <td>{{res.exit}}</td>
+                                    <td>{{res.return}}</td>
+                                    <td>{{res.numperson}}</td>
+                                    <td>COP ${{res.value}}</td>
+                                </tr>
+                                {% endfor %}
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
             <div class="row">
                     <h2 class="mt-4">Descubre Colombia </h2>
                     <strong class="text-center text-lg-left mt-4 mb-0">

@@ -1,0 +1,78 @@
+{% extends './layout/layout.html' %}
+
+{% block title %}
+Reservación
+{% endblock %}
+{% block content %}
+{% if status == "E" %}
+<div id="alerta" class="alert alert-danger d-block" role="alert">
+    Usuario o contraseña Invalidos, intente nuevamente
+</div>
+{% else %}
+<div></div>
+{% endif %}
+<div class="page-login-com">
+    <div class="container-confirmation">
+        
+            <div class="row">
+                <div class="col-lg-6 p-5 payment"></div>
+                <div class="col-lg-6 p-5">
+                    <div class="factura">
+                    <div class="row">
+                        <div class="col-lg-2 p-3">
+                            <img class="img-fluid-res"
+                                            src="{{url_for('static', filename='img/confirm.png')}}" />
+                        </div>
+                        <div class="col-lg-10 pt-4">
+                            <h6 class="mb-4">Su reservación realizó satisfactoriamente, si presenta cualquier duda o inquetud comunicarse a
+                                nuestras lineas de atención.</h6>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Items de facturación</th>
+                                <th scope="col">Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody class>
+                            <tr>
+                                <td>Apartamento</td>
+                                <td>{{data['name']}}</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre</td>
+                                <td>{{user['name']}}</td>
+                            </tr>
+                            <tr>
+                                <td>Correo</td>
+                                <td>{{user['email']}}</td>
+                            </tr>
+                            <tr>
+                                <td>Salida</td>
+                                <td>{{data['exit']}}</td>
+                            </tr>
+                            <tr>
+                                <td>Regreso</td>
+                                <td>{{data['return']}}</td>
+                            </tr>
+                            <tr>
+                                <td>Numero de personas</td>
+                                <td>{{data['numperson']}}</td>
+                            </tr>
+                            <tr>
+                                <td>Valor Total</td>
+                                <td>COP ${{data['value']}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

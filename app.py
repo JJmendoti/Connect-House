@@ -38,8 +38,10 @@ def addapartament():
 def homeuser():
     if session['user']:
         query = {"_id": ObjectId(session['user'])}
+        res = {"iduser": session['user']}
+        reserva = reservationCollection.find(res)
         result = userCollection.find_one(query)
-        return render_template('homeUser.html', data = result)
+        return render_template('homeUser.html', data = result, reserva = reserva)
 
 @app.route('/homeonwer')
 def homeonwer():
@@ -114,6 +116,8 @@ def user_by_id(id):
                 return redirect(url_for("404"))
         except:
             return redirect(url_for("404"))
+
+
 @app.route('/user/<id>',methods=['DELETE'])
 def delete_user(id):
     try:  
@@ -400,16 +404,32 @@ def reservation_add():
         iduser = request.form.get('iduser')
         idapartment = request.form.get('idapartment') 
         exi  = request.form.get('exit')
+        name = request.form.get('name')
+        city = request.form.get('city')
+        country = request.form.get('country')
         ret  = request.form.get('return')
         nump  = request.form.get('numperson')
         value = request.form.get('value')
-        query = {"iduser": iduser, "idapartment":idapartment,"exit": exi,"return": ret, "numperson":nump, "value": value}
+        query = {"iduser": iduser, "idapartment":idapartment,"exit": exi,"return": ret, "numperson":nump, "value": value, "name":name,"city":city,"country": country}
+        user = userCollection.find_one({"_id": ObjectId(iduser)})
         save = reservationCollection.insert_one(query)
         if save:
-            return redirect(url_for('homeuser'))
+            return redirect(url_for("confirmation", idap = query['idapartment'], ret = query['return']))
         else:
             return redirect(url_for('index'))
 
+@app.route('/confirmation/')
+def confirmation():
+    user = userCollection.find_one({"_id": ObjectId(session['user'])})
+    idapartment = request.args.get("idap")
+    ret = request.args.get("ret")
+    query = {"idapartment": idapartment, "iduser": session['user'], "return": ret}
+    result = reservationCollection.find_one(query)
+    
+    if user and result:
+        return render_template("pse_confirm.html", data = result, user = user )
+    else:
+        return redirect(url_for('homeuser'))
 
 @app.route('/signinuser', methods=['POST'])
 def signinuser():

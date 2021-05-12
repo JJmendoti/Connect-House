@@ -239,6 +239,16 @@
     background-repeat: no-repeat;
     background-size: 100%;
   }
+  .container-confirmation {
+    min-height: 90vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .payment{
+    background-image: url('../img/wall-conf.jpg');
+    background-repeat: no-repeat;
+   }
 
   .icon-res {
     background-color: rgba(27, 27, 27, 0.712);
@@ -254,6 +264,13 @@
     text-align: center;
     width: 40%;
     color: white;
+  }
+
+  .factura {
+    background-color: white;
+    min-height: 80vh;
+    padding: 20px;
+    border-radius: 10px;
   }
 
   .res {
@@ -323,4 +340,8 @@
     position: absolute;
     top: 5%;
     left: 7%;
+  }
+
+  .img-fluid-conf {
+    width: 25%;
   }
