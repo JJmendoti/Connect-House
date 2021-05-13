@@ -3,6 +3,7 @@ import pymongo
 from bson import ObjectId
 import os
 from werkzeug.utils import secure_filename
+import datetime
 
 #se crea copnexion a base datos
 myClient = pymongo.MongoClient("mongodb://admin-rentapp:rentapp12345@rentapp-shard-00-00.iqoc1.mongodb.net:27017,rentapp-shard-00-01.iqoc1.mongodb.net:27017,rentapp-shard-00-02.iqoc1.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-viqn5b-shard-0&authSource=admin&retryWrites=true&w=majority")
@@ -284,7 +285,13 @@ def searchapartment():
         search = search.lstrip()
         search = search.rstrip().capitalize()
         query = {"city": search}
-        result = apartmentsCollection.find(query)
+        salida = request.form.get('exit')
+        regreso = request.form.get('return')
+        if salida != '' and regreso != '':
+            sal = datetime.datetime.strptime(salida, "%Y-%m-%d")
+            reg  = datetime.datetime.strptime(regreso, "%Y-%m-%d") 
+            query = {"city": search, "exit":{"$nin": [sal]},"return":{"$nin":[reg]}}
+        result = apartmentsCollection.find(query)    
         if result:
             return render_template("filterapartment.html", data = result)
         else: 
@@ -334,7 +341,7 @@ def send_apartment():
     image_featured.save(os.path.join(app.config['UPLOAD_FOLDER'], image_featured_name))
     nigth_value = request.form.get('nightValue')
     review = request.form.get('review')
-    apartment = {"idonwer": idonwer, "name":name, "address": address, "active": active, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review}
+    apartment = {"idonwer": idonwer, "name":name, "address": address, "active": active, "assessment": assessment, "location": location, "country": country, "city": city, "image":names_img, "image_featured": image_featured_name, "nigth_value":nigth_value, "review":review, "exit":[], "return":[]}
     save = apartmentsCollection.insert_one(apartment)
     if save:
         return render_template("addapartament.html", status = "Y")
@@ -404,16 +411,21 @@ def reservation_add():
         iduser = request.form.get('iduser')
         idapartment = request.form.get('idapartment') 
         exi  = request.form.get('exit')
+        salida = datetime.datetime.strptime(exi, "%d/%m/%Y")
         name = request.form.get('name')
         city = request.form.get('city')
         country = request.form.get('country')
         ret  = request.form.get('return')
+        regreso = datetime.datetime.strptime(ret, "%d/%m/%Y")
         nump  = request.form.get('numperson')
         value = request.form.get('value')
-        query = {"iduser": iduser, "idapartment":idapartment,"exit": exi,"return": ret, "numperson":nump, "value": value, "name":name,"city":city,"country": country}
-        user = userCollection.find_one({"_id": ObjectId(iduser)})
+        query = {"iduser": iduser, "idapartment":idapartment,"exit": salida,"return": regreso, "numperson":nump, "value": value, "name":name,"city":city,"country": country}
         save = reservationCollection.insert_one(query)
-        if save:
+        apartment_reserva = {"_id": ObjectId(idapartment)}
+        apart = apartmentsCollection.find_one(apartment_reserva)
+        data = {"$addToSet":{"exit":salida, "return": regreso}}
+        saveapartment = apartmentsCollection.update_one(apartment_reserva,data)
+        if save and saveapartment:
             return redirect(url_for("confirmation", idap = query['idapartment'], ret = query['return']))
         else:
             return redirect(url_for('index'))
@@ -423,13 +435,14 @@ def confirmation():
     user = userCollection.find_one({"_id": ObjectId(session['user'])})
     idapartment = request.args.get("idap")
     ret = request.args.get("ret")
-    query = {"idapartment": idapartment, "iduser": session['user'], "return": ret}
+    ret = ret[:10]
+    regreso = datetime.datetime.strptime(ret, "%Y-%m-%d")
+    query = {"idapartment": idapartment, "iduser": session['user'], "return": regreso}
     result = reservationCollection.find_one(query)
-    
-    if user and result:
-        return render_template("pse_confirm.html", data = result, user = user )
-    else:
-        return redirect(url_for('homeuser'))
+    result['return'] = str(result['return'])[:10]
+    result['exit'] = str(result['exit'])[:10]
+    return render_template("pse_confirm.html", data = result, user = user )
+  
 
 @app.route('/signinuser', methods=['POST'])
 def signinuser():
