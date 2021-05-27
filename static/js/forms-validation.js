@@ -921,3 +921,121 @@ function validateAddApartment() {
     return false;
   }
 }
+
+
+
+let validateSearches = () => {
+
+  let ubication = document.getElementById("ubication").value;
+  let salidas = document.getElementById("salidas").value;
+  let llegada = document.getElementById("llegada").value;
+  let huespedes = document.getElementById("huespedes").value;
+
+
+  if (ubication === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo ubicación esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      width: 600,
+      height: 600,
+      toast: true,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }else if (salidas === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo salida esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }else if (llegada === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo llegada esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+
+  }else if (huespedes === "") {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El campo huespedes esta vacio",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      toast: true,
+      width: 600,
+      height: 600,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }
+}

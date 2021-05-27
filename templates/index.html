@@ -8,48 +8,48 @@ Connect-House
 <header class="site-header inicio">
     <div class="container-fluid">
         <div class="container">
-            <form action="/search-apartment" method="POST">
-            <div class="row buscador">
-                <div class="col-sm-3 col-md-3">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-map-marked-alt text-danger fw-bold me-1"></i>
-                        <label class="form-label text-danger fw-bold" for="ubication">Ubicación</label>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill" name="search" id="ubication" type="text"
-                            placeholder="¿A dónde vas?" aria-label="text" p-2>
+            <form action="/search-apartment" method="POST" onsubmit="return validateSearches();">
+                <div class="row buscador">
+                    <div class="col col-sm-3 col-md-12 col-lg-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marked-alt text-danger fw-bold me-1"></i>
+                            <label class="form-label text-danger fw-bold" for="ubication">Ubicación</label>
+                            <input class="form-control fw-bold m-1 p-2 rounded-pill" name="search" id="ubication"
+                                type="text" placeholder="¿A dónde vas?" aria-label="text" p-2>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-calendar-check text-danger fw-bold me-1"></i>
-                        <label class="form-label text-danger fw-bold" for="salid">Salida</label>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill" name="exit" id="salid" type="date"
-                            placeholder="Agrega Fechas" aria-label="datetime">
+                    <div class="col col-sm-3 col-md-12 col-lg-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-calendar-check text-danger fw-bold me-1"></i>
+                            <label class="form-label text-danger fw-bold" for="salidas">Salida</label>
+                            <input class="form-control fw-bold m-1 p-2 rounded-pill" name="exit" id="salidas" type="date"
+                                placeholder="Agrega Fechas" aria-label="datetime">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-calendar-day text-danger fw-bold me-1"></i>
-                        <label class="form-label text-danger fw-bold" for="llegada">Llegada</label>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill" name="return" id="llegada" type="date"
-                            placeholder="Agrega Fechas" aria-label="datetime">
+                    <div class="col col-sm-3 col-md-12 col-lg-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-calendar-day text-danger fw-bold me-1"></i>
+                            <label class="form-label text-danger fw-bold" for="llegada">Llegada</label>
+                            <input class="form-control fw-bold m-1 p-2 rounded-pill" name="return" id="llegada"
+                                type="date" placeholder="Agrega Fechas" aria-label="datetime">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-users text-danger fw-bold me-1 text-center"></i>
-                        <label class="form-label text-danger fw-bold" for="huespedes">Viajeros</label>
-                        <input class="form-control fw-bold m-1 p-2 rounded-pill" id="huespedes" type="text"
-                            placeholder="¿Cuántos?" aria-label="Search">
-                        <div class="d-flex  align-items-center">
-                            <button class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2"
-                                type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
+                    <div class="col col-sm-3 col-md-12 col-lg-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-users text-danger fw-bold me-1 text-center"></i>
+                            <label class="form-label text-danger fw-bold" for="huespedes">Viajeros</label>
+                            <input class="form-control fw-bold m-1 p-2 rounded-pill" id="huespedes" type="text"
+                                placeholder="¿Cuántos?" aria-label="Search">
+                            <div class="d-flex  align-items-center">
+                                <button class="btn btn-danger fw-bold text-warning fw-bold rounded-circle ms-2"
+                                    type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
         </div>
         <div class="contenido-header">
             <h2>¡Los anfitriones lo hacen posible!</h2>
@@ -60,7 +60,7 @@ Connect-House
 
 <div class="page">
     <div class="container">
-        <div class="carousel">
+        <!-- <div class="carousel">
             <div class="carousel__contenedor">
                 <button aria-label="Anterior" class="carousel__anterior">
                     <i class="fas fa-chevron-left"></i>
@@ -107,7 +107,74 @@ Connect-House
             </div>
 
             <div role="tablist" class="carousel__indicadores"></div>
+        </div> -->
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/1.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/2.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/3.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/4.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/5.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/6.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/7.jfif" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/8.jpeg" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/9.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/10.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/11.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/12.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/13.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/14.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/15.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/16.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/17.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img class="img-slide" src="/static/img/slider/18.jpeg" alt="">
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
         </div>
+
 
         <div class="container bg-light mb-3 pb-2 p-3 rounded-2">
             <h2 class="text-dark fw-bold">Explora cerca de ti</h2>
@@ -344,8 +411,8 @@ Connect-House
                     <img class="item-image" src="/static/img/descubre/d3.jpg">
                 </div>
                 <p class="item-details  text-center">
-                    <button class="btn btn-warning  rounded-pill  " data-bs-toggle="collapse"
-                        href="#aventura" role="button" aria-expanded="false" aria-controls="aventura">
+                    <button class="btn btn-warning  rounded-pill  " data-bs-toggle="collapse" href="#aventura"
+                        role="button" aria-expanded="false" aria-controls="aventura">
                         Aventuras
                     </button>
                 </p>
