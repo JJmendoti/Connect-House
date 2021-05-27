@@ -1039,3 +1039,62 @@ let validateSearches = () => {
     return false;
   }
 }
+
+
+let validateEmail = (email) => {
+  let exReEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  let validEmail = exReEmail.test(email);
+  if (validEmail==true) {
+    Swal.fire({
+      title: "Advertencia",
+      text: "El correo es valido",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      width: 600,
+      height: 600,
+      toast: true,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }else{
+    Swal.fire({
+      title: "Advertencia",
+      text: "Su correo ingresado no es valido",
+      icon: "warning",
+      confirmButtonText: "Continuar",
+      footer:
+        '<span class="footer-alert">Esta información es importante</span>',
+      background: "#fff",
+      backdrop: true,
+      width: 600,
+      height: 600,
+      toast: true,
+      position: "center",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+      stopKeydownPropagation: false,
+      showConfirmButton: true,
+      confirmButtonColor: "#efb810",
+      confirmButtonAriaLabel: "Continuar",
+      buttonsStyling: true,
+      showCloseButton: true,
+      closeButtonAriaLabel: "close alert",
+    });
+    return false;
+  }
+}
